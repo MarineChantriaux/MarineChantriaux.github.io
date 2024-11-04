@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marine Chantriaux</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <!-- favicon / mini-icone-->
+    <meta name="description" content="Marine Chantriaux">
+    <!-- meta description pr chaque page-->
+    <link rel="stylesheet" href="style.css"> <!-- Add the link to the external CSS file : raccourci link:css -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <!-- https://jenseign.com/le-h1-logo/ -->
+        <h1><a href="index.html"><img src="logo.png" alt="Marine Chantriaux"></a></h1>
+        <nav class="header-nav1">
+            <a href="home.html"><img src="picto-contact.png" alt="accueil"></a>
+            <a href="index.html"><img src="picto-work.png" alt="projets"></a>
+        </nav>
+        <nav class="header-nav2"> 
+            <a href="a-propos.html"><img src="picto-about.png" alt="a propos"></a>
+          <a href="https://instagram.com/in.eart"><img src="picto-insta.png" alt="instagram"></a>
+        </nav>
+    </header>
+
+
+    <div class="projets">
+        <a class="projet" href="orangeisthenewwaide.html">
+            <img src="img/34mca.png"alt="poster orange is the new waide">
+            <h2>Orange is the New Waide</h2>
+        </a>
+        
+        <a class="projet" href="magazine.html">
+            <img src="img/IMG_5695-modif.JPG" alt="image magazine">
+            <h2>Magazine</h2>
+        </a>
+
+        <a class="projet" href="coffret-editorial.html">
+            <img src="img/IMG_5829_modif_34.jpg">
+            <h2>Coffret éditorial</h2>
+        </a>
+
+        <a class="projet" href="temps.html">
+            <img src="img/SAM_0866-modif.jpg" alt="image magazine">
+            <h2>Hors temps</h2>
+        </a>
+
+        <a class="projet" href="modele vivant.html">
+            <img src="img/SAM_1639.JPG" alt="modèle vivant">
+            <h2>Modèle vivant</h2>
+        </a>
+
+        <a class="projet" href="ischia.html">
+            <img src="img/SAM_1292_modif2.jpg"alt="poster orange is the new waide">
+            <h2>Reportage à Ischia</h2>
+        </a>
+
+        <a class="projet" href="couvertures-livres.html">
+            <img src="img/SAM_1639.JPG" alt="couvertures de livre">
+            <h2>Couvertures de livres</h2>
+        </a>
+
+        <a class="projet" href="reportageanimalier.html">
+            <img src="img/IMG_5126-modif.jpg">
+            <h2>Reportage animalier</h2>
+        </a>
+
+        <a class="projet" href="bridget-riley.html">
+            <img src="img/SAM_1639.JPG" alt="bridget riley">
+            <h2>Bridget Riley</h2>
+        </a>
+
+        <a class="projet" href="posters.html">
+            <img src="img/SAM_1639.JPG" alt="posters">
+            <h2>Posters</h2>
+        </a>
+        
+        <a class="projet" href="stop-motion.html">
+            <img src="img/frame-00000-modif.jpg" alt="miniature stop-motion">
+            <h2>Stop-motion</h2>
+        </a>
+    </div>
+
+    <div class="footer">
+            <h4>© 2024 Marine Chantriaux</h4>
+        <div class="langue1">
+            <p>FR</p>
+        </div>
+        <div class="langue2">
+            <p>EN</p>
+        </div>
+    </div>
+</body>
+</html>
