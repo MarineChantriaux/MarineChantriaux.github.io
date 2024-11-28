@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marine Chantriaux - à propos</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <!-- favicon / mini-icone-->
+    <meta name="description" content="Marine Chantriaux">
+    <!-- meta description pr chaque page-->
+    <link rel="stylesheet" href="style.css"> <!-- Add the link to the external CSS file : raccourci link:css -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <!-- https://jenseign.com/le-h1-logo/ -->
+        <nav class="header-nav">
+            <a href="a-propos.html">
+                <img src="picto-about.png" alt="a propos">
+            </a>
+            <a class="pc" href="index.html"><img src="picto-work.png" alt="projets"></a>
+        </nav>
+        <h1><a href="index.html"><img class="mobile "src="favicon.png" alt="Marine Chantriaux" width="117" height="51"><img class="no-mobile "src="logo.svg" alt="Marine Chantriaux" width="117" height="51"></a></h1>
+        <nav class="header-nav"> 
+            <a href="home.html"><img src="picto-contact.png" alt="accueil"></a>
+            <a href="https://instagram.com/in.eart"><img src="picto-insta.png" alt="instagram"></a>
+        </nav>
+    </header>
+
+    <div class="page-projet-video">
+        <div class="intro-video">
+            <video controls autoplay loop poster="img/screenshot_riley.jpg">
+                <source src="videos/CHEVRES_MarineChantriaux.mov" type="video/mp4">
+                <source src="video.webm" type="video/webm">
+                Votre navigateur ne supporte pas ma balise vidéo.
+              </video>
+              
+              <div class="description-video">
+                <div class="introintro">
+                    <a class="retour" href="index.html">⭠ RETOUR</a>
+                    <div class="fr-en">
+                        <button class="fr-en" onclick="toggleLanguage('fr')">FR</button>
+                        <button class="fr-en" onclick="toggleLanguage('en')">EN</button>
+                    </div>
+                </div>
+
+                <div class="fr" id="fr">
+                    <div class="intro-mobile-haut">
+                        <h2>Chèvres naines</h2>
+                        <h3>2024 - Dessin, prise de son, montage vidéo, détournement
+                        <br>REGARD SUR UN ANIMAL DU ZOO D’AMIENS METROPOLE</h3>
+                    </div>
+                    <div class="intro-mobile-bas">
+                        <p>Etude d'un animal du zoo d’Amiens, au choix. Méthodes de représentation de l'animal et d’exposition des croquis sélectionnés libres.
+                        <br>Afin de représenter la chèvre naine telle que je l'ai perçue: amusante et sociable, je la dessine dans ses positions les plus improbables.
+                        <br>J'utilise un trait brut, voire caricatural et je la dessine dans ses positions des plus grotesques.</p>
+                    </div>
+                </div>
+                <div class="en" id="en" style="display: none;">
+                    <div class="intro-mobile-haut">
+                        <h2>Bridget Riley</h2>
+                        <h3>2024 - Video editing, imitation, reinterpretation
+                        <br>A LOOK AT A CONTEMPORARY WORK</h3>
+                    </div>
+                    <div class="intro-mobile-bas">
+                    <p>This is a short film about Bridget Riley’s “Rose Rose” poster for the London 2012 Summer Olympics, Riley remaining celebrated for her optically vibrant paintings.
+                        I chose to rely on the presence and importance of the horizontal line in the original poster to instill the dynamics and rhythm of sport practice, especially at a professional level.
+                        <br>By manipulating relationships between sports, colors and shapes through video editing, I tried to metaphorically highlight sport fields such as athletic tracks or swimming lanes : I wanted to replicate the feeling of movement, capturing the energy flowing through sport and the Olympic Games in general, which Bridget Riley did herself.
+                    </p>
+                </div>
+                </div>
+            </div>
+
+    </div>
+    <script>
+    function toggleLanguage(lang) {
+        const frContent = document.getElementById('fr');
+        const enContent = document.getElementById('en');
+    
+        if (lang === 'fr') {
+            frContent.style.display = 'block';
+            enContent.style.display = 'none';
+        } else if (lang === 'en') {
+            frContent.style.display = 'none';
+            enContent.style.display = 'block';
+        }
+    }
+    </script>
+   
+</body>

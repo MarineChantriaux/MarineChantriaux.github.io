@@ -1,1 +1,168 @@
-site en construction
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marine Chantriaux</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <!-- favicon / mini-icone-->
+    <meta name="description" content="Marine Chantriaux">
+    <!-- meta description pr chaque page-->
+    <link rel="stylesheet" href="style.css"> <!-- Add the link to the external CSS file : raccourci link:css -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <!-- https://jenseign.com/le-h1-logo/ -->
+
+
+        <nav class="header-nav">
+            <a href="a-propos.html">
+                <img src="picto-about.png" alt="a propos">
+            </a>
+            <a class="pc" href="index.html"><img src="picto-work.png" alt="projets"></a>
+        </nav>
+        <h1><a href="index.html"><img class="mobile "src="favicon.png" alt="Marine Chantriaux" width="117" height="51"><img class="no-mobile "src="logo.svg" alt="Marine Chantriaux" width="117" height="51"></a></h1>
+        <nav class="header-nav"> 
+            <a href="home.html"><img src="picto-contact.png" alt="accueil"></a>
+            <a href="https://instagram.com/in.eart"><img src="picto-insta.png" alt="instagram"></a>
+        </nav>
+    </header>
+
+
+    <div class="projets">
+        <a class="projet" href="orangeisthenewwaide.html">
+            <img class="b-img" src="img/34mca.png"alt="poster orange is the new waide">
+            <div class="overlay">
+                <span>Orange is the <br> new Waide</span>
+            </div>
+        </a>
+
+        <a class="projet" href="coffret-editorial.html">
+            <img class="a-img" src="img/IMG_5829_modif_34.jpg">
+            <div class="overlay">
+                <span>Coffret <br> éditorial</span>
+            </div>
+        </a>
+        
+        
+        <a class="projet" href="bridget-riley.html">
+            <img class="a-img" src="img/SAM_1639.JPG" alt="bridget riley">
+            <div class="overlay">
+                <span>Bridget Riley</span>
+            </div>
+        </a>
+        
+        <a class="projet" href="chevres.html">
+            <img class="a-img" src="img/SAM_1639.jpg">
+            <div class="overlay">
+                <span>Chèvres naines</span>
+            </div>
+        </a>
+
+        <a class="projet" href="posters.html">
+            <img class="a-img" src="img/mockup-rue.jpg" alt="posters">
+            <div class="overlay">
+                <span>Posters</span>
+            </div>
+        </a>
+        
+        <a class="projet" href="ischia.html">
+            <img class="a-img" src="img/SAM_1292_modif2.jpg"alt="poster orange is the new waide">
+            <div class="overlay">
+                <span>Ischia</span>
+            </div>
+        </a>
+
+        <a class="projet" href="magazine.html">
+            <img class="a-img" src="img/IMG_5695-modif.JPG" alt="image magazine">
+            <div class="overlay">
+                <span>Magazine</span>
+            </div>
+        </a>
+        
+        <a class="projet" href="stop-motion.html">
+            <img class="a-img" src="img/frame-00000-modif.jpg" alt="miniature stop-motion">
+            <div class="overlay">
+                <span>Stop-motion</span>
+            </div>
+        </a>
+
+        <a class="projet" href="modele vivant.html">
+            <img class="a-img" src="img/SAM_1639.JPG" alt="modèle vivant">
+            <div class="overlay">
+                <span>Modèle vivant</span>
+            </div>
+        </a>
+
+    </div>
+
+    <!-- Menu déroulant pour changer de palette -->
+<!--<label for="themeSelect">Choisir un thème :</label>-->
+<select class="bouton-theme" id="themeSelect">
+    <option class="select-select" value="light-theme">Light</option>
+    <option class="select-select" value="blue-theme">Bleu</option>
+    <option class="select-select" value="pink-theme">Rose</option>
+    <option class="select-select" value="dark-theme">Dark</option>
+  </select>
+  
+  <script>
+    // Récupérer le menu déroulant
+    const themeSelect = document.getElementById('themeSelect');
+    
+    // Ajouter un écouteur d'événements au menu déroulant
+    themeSelect.addEventListener('change', () => {
+      // Vérifier si le thème sélectionné est sombre ou clair
+      const selectedTheme = themeSelect.value;
+  
+       // Retirer toutes les classes de thème
+       document.body.classList.remove('light-theme', 'blue-theme', 'pink-theme', 'dark-theme');
+      
+      // Ajouter la classe correspondant au thème sélectionné
+      if (selectedTheme) {
+        document.body.classList.add(selectedTheme);
+      }
+    });
+  </script>
+
+    <!-- Bouton retour en haut -->
+    <a href="#" class="back-to-top">
+        <img class="fleche" src="img/favcon.png" alt="flèche">
+        </a>
+
+        ⬆ Retour en haut
+
+    <script>
+        // Sélectionner le bouton
+        const backToTopButton = document.querySelector('.back-to-top');
+
+        // Afficher le bouton quand on scroll vers le bas
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) { // Afficher le bouton après 300px de scroll
+            backToTopButton.classList.add('show');
+            } else {
+            backToTopButton.classList.remove('show');
+            }
+        });
+    </script>
+
+    <script>
+        const projets = document.querySelectorAll('.projet');
+        projets.forEach(projet => {
+        projet.addEventListener('mouseover', () => {
+            projets.forEach(p => p.classList.add('unactive'));
+            projet.classList.remove('unactive');
+        });
+        projet.addEventListener('mouseout', () => {
+         projets.forEach(p => p.classList.remove('unactive'));
+        });
+        });
+    </script>
+
+    <div class="footer">
+            <p>© 2024 Marine Chantriaux - typographie : DM Sans par Colophon Foundry</p>
+    </div>
+</body>
+</html>

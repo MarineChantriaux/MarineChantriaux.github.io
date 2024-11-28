@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marine Chantriaux - à propos</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <!-- favicon / mini-icone-->
+    <meta name="description" content="Marine Chantriaux">
+    <!-- meta description pr chaque page-->
+    <link rel="stylesheet" href="style.css"> <!-- Add the link to the external CSS file : raccourci link:css -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <!-- https://jenseign.com/le-h1-logo/ -->
+        <nav class="header-nav">
+            <a href="a-propos.html">
+                <img src="picto-about.png" alt="a propos">
+            </a>
+            <a class="pc" href="index.html"><img src="picto-work.png" alt="projets"></a>
+        </nav>
+        <h1><a href="index.html"><img class="mobile "src="favicon.png" alt="Marine Chantriaux" width="117" height="51"><img class="no-mobile "src="logo.svg" alt="Marine Chantriaux" width="117" height="51"></a></h1>
+        <nav class="header-nav"> 
+            <a href="home.html"><img src="picto-contact.png" alt="accueil"></a>
+            <a href="https://instagram.com/in.eart"><img src="picto-insta.png" alt="instagram"></a>
+        </nav>
+    </header>
+
+    <div class="page-projet-stopmo">
+        <div class="intro-stopmo">
+            <video controls autoplay loop poster="img/screenshot_riley.jpg">
+                <source src="videos/marinechantriaux_bridgetriley.mp4" type="video/mp4">
+                <source src="video.webm" type="video/webm">
+                Ton navigateur ne supporte pas ma balise vidéo.
+              </video>
+              
+              <div class="description-bridget">
+                <div class="introintro">
+                    <a class="retour" href="index.html">⭠ RETOUR</a>
+                    <div class="fr-en">
+                        <button class="fr-en" onclick="toggleLanguage('fr')">FR</button>
+                        <button class="fr-en" onclick="toggleLanguage('en')">EN</button>
+                    </div>
+                </div>
+
+                <div class="fr" id="fr">
+                    <div class="intro-mobile-haut">
+                        <h2>Bridget Riley</h2>
+                        <h3>2024 - Montage vidéo, interprétation, imitation, détournement
+                        <br>REGARD SUR UNE OEUVRE CONTEMPORAINE</h3>
+                    </div>
+                    <div class="intro-mobile-bas">
+                        <p>Réalisation d'un film vidéo qui repose sur l'oeuvre picturale d'un artiste contemporain choisi. Il s’agit de créer une sorte d'étude ludique qui permettrait d’entrer dans une œuvre
+                        d’art selon un autre processus que la simple toile fixe.
+                        <br>J'ai choisi l'affiche « Rose Rose » de Bridget Riley, créée pour les Jeux olympiques d'été de Londres de 2012, Riley étant célèbre pour ses peintures optiquement vibrantes.
+                        <br>J'ai choisi de m'appuyer sur la présence et l'importance de la ligne horizontale dans l'affiche originale pour insuffler la dynamique et le rythme de la pratique sportive, notamment au niveau professionnel.
+                        <br>En manipulant les relations entre les sports, les couleurs et les formes à travers le montage vidéo, j'ai essayé de mettre en valeur métaphoriquement des terrains de sport tels que des pistes d'athlétisme ou des couloirs de natation : je voulais reproduire la sensation de mouvement, capter l'énergie qui circule à travers le sport et les Jeux Olympiques en général, ce que Bridget Riley a fait elle-même.
+                        </p>
+                    </div>
+                </div>
+                <div class="en" id="en" style="display: none;">
+                    <div class="intro-mobile-haut">
+                        <h2>Bridget Riley</h2>
+                        <h3>2024 - Video editing, imitation, reinterpretation
+                        <br>A LOOK AT A CONTEMPORARY WORK</h3>
+                    </div>
+                    <div class="intro-mobile-bas">
+                    <p>This is a short film about Bridget Riley’s “Rose Rose” poster for the London 2012 Summer Olympics, Riley remaining celebrated for her optically vibrant paintings.
+                        I chose to rely on the presence and importance of the horizontal line in the original poster to instill the dynamics and rhythm of sport practice, especially at a professional level.
+                        <br>By manipulating relationships between sports, colors and shapes through video editing, I tried to metaphorically highlight sport fields such as athletic tracks or swimming lanes : I wanted to replicate the feeling of movement, capturing the energy flowing through sport and the Olympic Games in general, which Bridget Riley did herself.
+                    </p>
+                </div>
+                </div>
+            </div>
+
+    </div>
+    <script>
+    function toggleLanguage(lang) {
+        const frContent = document.getElementById('fr');
+        const enContent = document.getElementById('en');
+    
+        if (lang === 'fr') {
+            frContent.style.display = 'block';
+            enContent.style.display = 'none';
+        } else if (lang === 'en') {
+            frContent.style.display = 'none';
+            enContent.style.display = 'block';
+        }
+    }
+    </script>
+   
+</body>
