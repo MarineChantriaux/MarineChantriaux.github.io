@@ -31,6 +31,9 @@
         </nav>
     </header>
 
+    <div class="h1 indexstage">
+        <p>Je recherche un <a class= "surlign" href="a-propos.html" target="_blank">stage</a>!!</p>
+    </div>
 
     <div class="projets">
         <a class="projet" href="orangeisthenewwaide.html">
@@ -49,14 +52,14 @@
         
         
         <a class="projet" href="bridget-riley.html">
-            <img class="a-img" src="img/SAM_1639.JPG" alt="bridget riley">
+            <img class="a-img" src="img/bridgetmockup.jpg" alt="bridget riley">
             <div class="overlay">
                 <span>Bridget Riley</span>
             </div>
         </a>
         
         <a class="projet" href="chevres.html">
-            <img class="a-img" src="img/SAM_1639.jpg" alt="chevres naines">
+            <img class="a-img" src="img/chevres.jpg" alt="chevres naines">
             <div class="overlay">
                 <span>Chèvres naines</span>
             </div>
@@ -76,10 +79,10 @@
             </div>
         </a>
 
-        <a class="projet" href="magazine.html">
+        <a class="projet" href="scarybestions.html">
             <img class="a-img" src="img/IMG_5695-modif.JPG" alt="image magazine">
             <div class="overlay">
-                <span>Magazine</span>
+                <span>Scary Bestions</span>
             </div>
         </a>
         
@@ -90,10 +93,10 @@
             </div>
         </a>
 
-        <a class="projet" href="modele vivant.html">
-            <img class="a-img" src="img/SAM_1639.JPG" alt="modèle vivant">
+        <a class="projet" href="risographie.html">
+            <img class="a-img" src="img/SAM_1639.JPG" alt="risographie">
             <div class="overlay">
-                <span>Modèle vivant</span>
+                <span>Riso</span>
             </div>
         </a>
 
@@ -102,37 +105,49 @@
     <!-- Menu déroulant pour changer de palette -->
 <!--<label for="themeSelect">Choisir un thème :</label>-->
 <select class="bouton-theme" id="themeSelect">
-    <option class="select-select" value="light-theme">Light</option>
-    <option class="select-select" value="blue-theme">Bleu</option>
-    <option class="select-select" value="pink-theme">Rose</option>
-    <option class="select-select" value="dark-theme">Dark</option>
+    <option class="select-select" value="orange-theme">Orange</option>
+    <option class="select-select" value="yellow-theme">Jaune</option>
+    <option class="select-select" value="purple-theme">Violet</option>
+    <option class="select-select" value="dark-theme">Nuit</option>
   </select>
   
   <script>
     // Récupérer le menu déroulant
-    const themeSelect = document.getElementById('themeSelect');
-    
-    // Ajouter un écouteur d'événements au menu déroulant
-    themeSelect.addEventListener('change', () => {
-      // Vérifier si le thème sélectionné est sombre ou clair
-      const selectedTheme = themeSelect.value;
-  
-       // Retirer toutes les classes de thème
-       document.body.classList.remove('light-theme', 'blue-theme', 'pink-theme', 'dark-theme');
-      
-      // Ajouter la classe correspondant au thème sélectionné
-      if (selectedTheme) {
+const themeSelect = document.getElementById('themeSelect');
+
+// Charger le thème sauvegardé depuis localStorage au chargement de la page
+document.addEventListener('DOMContentLoaded', () => {
+    const savedTheme = localStorage.getItem('selectedTheme'); // Récupérer le thème sauvegardé
+    if (savedTheme) {
+        // Appliquer le thème sauvegardé
+        document.body.classList.add(savedTheme);
+        themeSelect.value = savedTheme; // Mettre à jour le menu déroulant
+    }
+});
+
+// Ajouter un écouteur d'événements au menu déroulant
+themeSelect.addEventListener('change', () => {
+    // Vérifier si un thème est sélectionné
+    const selectedTheme = themeSelect.value;
+
+    // Retirer toutes les classes de thème
+    document.body.classList.remove('orange-theme', 'yellow-theme', 'purple-theme', 'dark-theme');
+
+    // Ajouter la classe correspondant au thème sélectionné, si elle existe
+    if (selectedTheme) {
         document.body.classList.add(selectedTheme);
-      }
-    });
+
+        // Sauvegarder le thème sélectionné dans localStorage
+        localStorage.setItem('selectedTheme', selectedTheme);
+    }
+});
   </script>
 
     <!-- Bouton retour en haut -->
     <a href="#" class="back-to-top">
-        <img class="fleche" src="img/favcon.png" alt="flèche">
+        <img class="fleche" src="img/favcon.png" alt="⬆">
         </a>
 
-        ⬆ Retour en haut
 
     <script>
         // Sélectionner le bouton
@@ -164,5 +179,6 @@
     <div class="footer">
             <p>© 2024 Marine Chantriaux - typographie : DM Sans par Colophon Foundry</p>
     </div>
+
 </body>
 </html>

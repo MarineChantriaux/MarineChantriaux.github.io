@@ -32,55 +32,114 @@
     </header>
 
     <div class="page-a-propos"> <!--main project à modifier-->
-        <h1>Marine Chantriaux,<br>
-        étudiante en design graphique <br>
-        à l’<a class= "lien" href="https://www.esad-amiens.fr/" target="_blank">ESAD d’Amiens</a>.</h1>
-
-        <div class="cv">
-            <div class="exp">
-                <h2>Expériences & bénévolat</h2>
-                <p>2024-25 : statut de vacataire en tant que tutrice d'une élève de l'ESAD d'Amiens, suivi et aide à la méthodologie, la hiérarchisation et à l'organisation
-                    <br>→ Pédagogie, patience, organisation, disponibilité<br>
-                <br>2024-25 : secrétaire du bureau des étudiants de l'ESAD d'Amiens
-                    <br>→ Prise de responsabilités, communication, travail d'équipe, prise d'initiatives<br>
-                <br>09/2024 : réalisation d'un poster et d'un programme pour la projection annuelle de courts métrages étudiants "Orange is the new Waide", à la suite d'un concours
-                    <br>→ Communication, organisation et délai de conception<br>
-                <br>02/2024 : co-organisation d’un atelier broderie et crochet collaboratif lors des journées portes ouvertes de l’ESAD d’Amiens
-                    <br>→ Relationnel, travail d’équipe, pédagogie<br>
-            </div>
-            <div class="comp">
-                <h2>Compétences</h2>
-                    <li>Anglais niveau B2</li>
-                    <li>Permis B</li><br>
-                    <li>Communication visuelle et graphisme</li>
-                    <li>Photographie et réglages sur appareils numériques</li>
-                    <li>Montage vidéo</li>
-                    <li>HTML/CSS</li><br>
-                    
-                    <li>VS Code</li>
-                    <li>DaVinci Resolve, Premiere Pro</li>
-                    <li>InDesign, Photoshop, Illustrator</li>
-                    <li>After Effects</li>
-                    <li>Google Drive, Google Sheets, Google Docs</li>
-                    <li>Gestion d'Instagram</li>
-                    <li>Communication par mail</li>
-
-                    <br><h2>Formation</h2>
-                <p>2023-2026 : Diplôme National d'Art à l'ESAD d'Amiens
-                    <br>→ Design graphique, illustration, photographie, vidéo, typographie, édition, webdesign, motion design, histoire du graphisme, sémiologie, anglais, volume<br>
-                <br>2023 : Baccalauréat technologique STD2A
-                (Sciences et Technologies du Design et des Arts
-                Appliqués) mention très bien -
-                Lycée Edouard Branly, Amiens
+        <div class="h1">
+            <p>Je recherche un <a class= "surlign" href="https://www.esad-amiens.fr/" target="_blank">stage</a>!!</p>
+            <div class="h2">
+                <p>
+                    D'une durée de 4 à 6 semaines, entre juin et juillet.
+                </p>
             </div>
         </div>
-    
-        <div class="bouton">
-            <div class="bouton-texte">
-                <a href="projets.html">
-                <h2>Voir mes projets</h2></a>
-            </div>
+        <div class="h3"> 
+            <p>                Passionnée de graphisme, j'ai commencé à me former dès le cycle secondaire au lycée Edouard Branly à Amiens, où j'ai obtenu un bac STD2A mention très bien.
+                Je poursuis depuis mes études en DNA design graphique à l’<a class= "surlign" href="https://www.esad-amiens.fr/" target="_blank">ESAD d’Amiens</a>, où je développe des compétences en design graphique, photographie, motiondesign, webdesign, typographie...
+                J'entretiens un intérêt particulier pour l'affiche vectrice de pensée, la risographie vivante, sensible et imparfaite, et le design numérique (vidéo, motion-design, web, UI/UX).
+            Volontaire, j'arbore plusieurs casquettes: je suis à la fois déléguée, secrétaire du bureau des étudiants et tutrice d'une élève de première année.  
+        </p> </div>
+        <div class="competences">
+            <li>Permis B</li>
+            <li>Français courant, Anglais niveau B2</li>
+            <li>Communication visuelle et graphisme</li>
+            <li>Photographie et réglages</li>
+            <li>Montage vidéo</li>
+            <li>Création de site web</li>
+            <li>Gestion d'un compte Instagram</li>
+            <li>Communication par mail</li>
+            <li>HTML/CSS</li>
+            <li>Indesign, Illustrator, Photoshop, AfterEffects, PremierePro</li>
+            <li>DaVinci Resolve</li>
+            <li>VSCode</li>
+            <li>Google Docs, Google Sheets, Google Drive, Google Slides</li>
         </div>
 
     </div>
+
+<!-- Menu déroulant pour changer de palette -->
+<!--<label for="themeSelect">Choisir un thème :</label>-->
+<select class="bouton-theme" id="themeSelect">
+    <option class="select-select" value="orange-theme">Orange</option>
+    <option class="select-select" value="yellow-theme">Jaune</option>
+    <option class="select-select" value="purple-theme">Violet</option>
+    <option class="select-select" value="dark-theme">Nuit</option>
+  </select>
+  
+  <script>
+    // Récupérer le menu déroulant
+const themeSelect = document.getElementById('themeSelect');
+
+// Charger le thème sauvegardé depuis localStorage au chargement de la page
+document.addEventListener('DOMContentLoaded', () => {
+    const savedTheme = localStorage.getItem('selectedTheme'); // Récupérer le thème sauvegardé
+    if (savedTheme) {
+        // Appliquer le thème sauvegardé
+        document.body.classList.add(savedTheme);
+        themeSelect.value = savedTheme; // Mettre à jour le menu déroulant
+    }
+});
+
+// Ajouter un écouteur d'événements au menu déroulant
+themeSelect.addEventListener('change', () => {
+    // Vérifier si un thème est sélectionné
+    const selectedTheme = themeSelect.value;
+
+    // Retirer toutes les classes de thème
+    document.body.classList.remove('orange-theme', 'yellow-theme', 'purple-theme', 'dark-theme');
+
+    // Ajouter la classe correspondant au thème sélectionné, si elle existe
+    if (selectedTheme) {
+        document.body.classList.add(selectedTheme);
+
+        // Sauvegarder le thème sélectionné dans localStorage
+        localStorage.setItem('selectedTheme', selectedTheme);
+    }
+});
+  </script>
+
+    <!-- Bouton retour en haut -->
+    <a href="#" class="back-to-top">
+        <img class="fleche" src="img/favcon.png" alt="⬆">
+        </a>
+
+
+    <script>
+        // Sélectionner le bouton
+        const backToTopButton = document.querySelector('.back-to-top');
+
+        // Afficher le bouton quand on scroll vers le bas
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) { // Afficher le bouton après 300px de scroll
+            backToTopButton.classList.add('show');
+            } else {
+            backToTopButton.classList.remove('show');
+            }
+        });
+    </script>
+
+    <script>
+        const projets = document.querySelectorAll('.projet');
+        projets.forEach(projet => {
+        projet.addEventListener('mouseover', () => {
+            projets.forEach(p => p.classList.add('unactive'));
+            projet.classList.remove('unactive');
+        });
+        projet.addEventListener('mouseout', () => {
+         projets.forEach(p => p.classList.remove('unactive'));
+        });
+        });
+    </script>
+
+    <div class="footer">
+            <p>© 2024 Marine Chantriaux - typographie : DM Sans par Colophon Foundry</p>
+    </div>
+
 </body>

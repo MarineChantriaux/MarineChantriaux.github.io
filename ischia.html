@@ -32,76 +32,147 @@
     <div class="page-projet">
         <div class="page-projet-intro-ischia">
             <div class="description-ischia">
-                <h4><a class="retour" href="index.html"> RETOUR </a></h4>   
-                <h2>Ischia</h2> 
-                <h3>2024 - Série de photographies </h3>
-            <p>Série de photographies réalisées lors d'un&nbsp;voyage en&nbsp;Italie. <br>Expérimentations autour d'un univers qui&nbsp;m'est propre.</p>
+                <div class="introintro">
+                    <a class="retour" href="index.html">⭠ RETOUR</a>
+                    <div class="fr-en">
+                        <button class="fr-en" onclick="toggleLanguage('fr')">FR</button>
+                        <button class="fr-en" onclick="toggleLanguage('en')">EN</button>
+                    </div>
+                </div>
+ 
+            <div class="fr" id="fr">
+                <div class="h2">
+                    <p>Ischia</p>
+                </div> 
+                <div class="h3">
+                    <p>2024 - Série de photographies </p>
+                </div>
+                <p>Série de photographies réalisées lors d'un&nbsp;voyage en&nbsp;Italie. <br>Expérimentations autour d'un univers qui&nbsp;m'est propre.</p>
             </div>
+
+            <div class="en" id="en" style="display: none;">
+                <div class="h2 surlign">                    
+                    <p>Ischia</p>
+                </div>
+                <div class="h3">
+                    <p>2024 - Photography</p>
+                </div>
+                    <p>Series of photographs taken during a vacation in Italy.</p>
+            </div>
+
         </div>
         <div class="page-projet-galerie">
             <div class="galerie-coffret">
-                <img src="img/SAM_1071_modif.jpg" alt="photo">
-                <img class="coffret-a" src="img/SAM_1286_modif.jpg" alt="croisiere">
-                <img src="img/SAM_1019_modif.jpg" alt="magasin">
-                <img src="img/SAM_1394_modif.jpg" alt="gros plan">
-                <img src="img/SAM_1050_modif.jpg" alt="lampadaire">
-                <img src="img/SAM_1369_modif.jpg" alt="chien">
-                <img class="coffret-a" src="img/SAM_1122_modif2.jpg" alt="bronzette">
-                <img src="img/SAM_1180_modif.jpg" alt="papi">
-                <img src="img/SAM_1361_modif.jpg" alt="chat">
-                <img src="img/SAM_1284_modif.jpg" alt="voiture">
-                <img src="img/SAM_1110_modif.jpg" alt="supermarche">
-                <img src="img/SAM_1083_modif.jpg" alt="parasol">
-                <img src="img/SAM_1082_modif.jpg" alt="plage">
-                <img class="coffret-a" src="img/SAM_1292_modif2.jpg" alt="fesses">
-
-                <img src="img/SAM_1115_modif.jpg" alt="dos">
-
-
-
-                
-                <img src="img/SAM_1052_modif.jpg" alt="bateaux"> 
-                
-                <img src="img/SAM_1022_modif.jpg" alt="slip rouge">
-                
-                <img src="img/SAM_1430_modif.jpg" alt="parapluie">
+                <img src="img/SAM_1071_modif.jpg" alt="photo"class="thumbnail">
+                <img class="coffret-a thumbnail" src="img/SAM_1286_modif.jpg" alt="croisiere">
+                <img src="img/SAM_1019_modif.jpg" alt="magasin"class="thumbnail">
+                <img src="img/SAM_1394_modif.jpg" alt="gros plan"class="thumbnail">
+                <img src="img/SAM_1050_modif.jpg" alt="lampadaire"class="thumbnail">
+                <img src="img/SAM_1369_modif.jpg" alt="chien"class="thumbnail">
+                <img class="coffret-a thumbnail" src="img/SAM_1122_modif2.jpg" alt="bronzette">
+                <img src="img/SAM_1180_modif.jpg" alt="papi"class="thumbnail">
+                <img src="img/SAM_1361_modif.jpg" alt="chat"class="thumbnail">
+                <img src="img/SAM_1284_modif.jpg" alt="voiture"class="thumbnail">
+                <img src="img/SAM_1110_modif.jpg" alt="supermarche"class="thumbnail">
+                <img src="img/SAM_1083_modif.jpg" alt="parasol"class="thumbnail">
+                <img src="img/SAM_1082_modif.jpg" alt="plage"class="thumbnail">
+                <img class="coffret-a thumbnail" src="img/SAM_1292_modif2.jpg" alt="fesses">
+                <img src="img/SAM_1115_modif.jpg" alt="dos"class="thumbnail">
+                <img src="img/SAM_1052_modif.jpg" alt="bateaux"class="thumbnail"> 
+                <img src="img/SAM_1022_modif.jpg" alt="slip rouge"class="thumbnail">
+                <img src="img/SAM_1430_modif.jpg" alt="parapluie"class="thumbnail">
             </div>
         </div>
 
     </div>
 
-    <!-- Menu déroulant pour changer de palette -->
-<!--<label for="themeSelect">Choisir un thème :</label>-->
-<select class="bouton-theme" id="themeSelect">
-    <option class="select-select" value="light-theme">Light</option>
-    <option class="select-select" value="blue-theme">Bleu</option>
-    <option class="select-select" value="pink-theme">Rose</option>
-    <option class="select-select" value="dark-theme">Dark</option>
-  </select>
+    <div id="lightbox" class="lightbox">
+        <img id="lightbox-img" src="" alt="Image agrandie">
+    </div>
+
+    <script>
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const thumbnails = document.querySelectorAll('.thumbnail');
+
+        thumbnails.forEach(thumbnail => {
+            thumbnail.addEventListener('click', () => {
+                lightboxImg.src = thumbnail.src;
+                lightbox.style.display = 'flex';
+            });
+        });
+
+        lightbox.addEventListener('click', (event) => {
+            if (event.target !== lightboxImg) {
+                lightbox.style.display = 'none';
+            }
+        });
+    </script>
+    
+    
   
   <script>
-    // Récupérer le menu déroulant
-    const themeSelect = document.getElementById('themeSelect');
+    function toggleLanguage(lang) {
+        const frContent = document.getElementById('fr');
+        const enContent = document.getElementById('en');
     
-    // Ajouter un écouteur d'événements au menu déroulant
-    themeSelect.addEventListener('change', () => {
-      // Vérifier si le thème sélectionné est sombre ou clair
-      const selectedTheme = themeSelect.value;
-  
-       // Retirer toutes les classes de thème
-       document.body.classList.remove('light-theme', 'blue-theme', 'pink-theme', 'dark-theme');
-      
-      // Ajouter la classe correspondant au thème sélectionné
-      if (selectedTheme) {
+        if (lang === 'fr') {
+            frContent.style.display = 'block';
+            enContent.style.display = 'none';
+        } else if (lang === 'en') {
+            frContent.style.display = 'none';
+            enContent.style.display = 'block';
+        }
+    }
+    </script>
+
+<!-- Menu déroulant pour changer de palette -->
+<!--<label for="themeSelect">Choisir un thème :</label>-->
+<select class="bouton-theme" id="themeSelect">
+    <option class="select-select" value="orange-theme">Orange</option>
+    <option class="select-select" value="yellow-theme">Jaune</option>
+    <option class="select-select" value="purple-theme">Violet</option>
+    <option class="select-select" value="dark-theme">Nuit</option>
+  </select>
+
+
+  <script>
+    // Récupérer le menu déroulant
+const themeSelect = document.getElementById('themeSelect');
+
+// Charger le thème sauvegardé depuis localStorage au chargement de la page
+document.addEventListener('DOMContentLoaded', () => {
+    const savedTheme = localStorage.getItem('selectedTheme'); // Récupérer le thème sauvegardé
+    if (savedTheme) {
+        // Appliquer le thème sauvegardé
+        document.body.classList.add(savedTheme);
+        themeSelect.value = savedTheme; // Mettre à jour le menu déroulant
+    }
+});
+
+// Ajouter un écouteur d'événements au menu déroulant
+themeSelect.addEventListener('change', () => {
+    // Vérifier si un thème est sélectionné
+    const selectedTheme = themeSelect.value;
+
+    // Retirer toutes les classes de thème
+    document.body.classList.remove('orange-theme', 'yellow-theme', 'purple-theme', 'dark-theme');
+
+    // Ajouter la classe correspondant au thème sélectionné, si elle existe
+    if (selectedTheme) {
         document.body.classList.add(selectedTheme);
-      }
-    });
+
+        // Sauvegarder le thème sélectionné dans localStorage
+        localStorage.setItem('selectedTheme', selectedTheme);
+    }
+});
   </script>
 
     <!-- Bouton retour en haut -->
     <a href="#" class="back-to-top">
-        <img class="fleche" src="img/favcon.png" alt="flèche">
+        <img class="fleche" src="img/favcon.png" alt="⬆">
         </a>
+
 
     <script>
         // Sélectionner le bouton

@@ -32,20 +32,162 @@
     <div class="page-projet-video">
         <div class="intro-video">
             <video controls autoplay loop poster="img/frame-00000.jpg">
-                <source src="videos/stop-motion-gomme.mp4" type="video/mp4">
+                <source src="videos/stopmotion_gomme.mp4" type="video/mp4">
                 <source src="video.webm" type="video/webm">
                 Ton navigateur ne supporte pas ma balise vidéo.
               </video>
             <div class="description-video">
-                <h4><a class="retour" href="index.html"> RETOUR </a></h4>   
-                <h2>Oh my gomme</h2> 
-                <h3>2024 - Réalisation d'un court-métrage en&nbsp;stop-motion </h3>
-                <p>Première approche du stop-motion. <br>
-                Scénario basé sur le choix d'un objet du quotidien qui prend vie. Expérimentation personnelle du mixed-media. </p>
-            </div>
+                <div class="introintro">
+                    <a class="retour" href="index.html">⭠ RETOUR</a>
+                    <div class="fr-en">
+                        <button class="fr-en" onclick="toggleLanguage('fr')">FR</button>
+                        <button class="fr-en" onclick="toggleLanguage('en')">EN</button>
+                    </div>
+                </div>
+
+                <div class="fr" id="fr">
+                    <div class="h2 surlign">                    
+                        <p>Oh my gomme</p>
+                    </div>
+                    <div class="h3">
+                        <p>2024 - Stop-motion, montage vidéo, mixed-media</p>
+                    </div>
+                    <p>Première approche du stop-motion. <br>
+                        Scénario basé sur le choix d'un objet du quotidien qui prend vie. Expérimentation personnelle du mixed-media. 
+                    </p>
+                </div>
+                <div class="en" id="en" style="display: none;">
+                    <div class="h2">
+                        <p>Oh my gomme</p>
+                    </div>
+                    <div class="h3">
+                        <p>2024 - Stop-motion, video editing, mixed- &nbsp;media</p>
+                    </div>    
+                        <p>First time with stop-motion. Scenario based on an everyday object that comes to life. I choosed to experience mixed-media technique.</p>
+                    </div>
+                </div>
         </div>
 
     </div>
     
    
+    <div id="lightbox" class="lightbox">
+        <img id="lightbox-img" src="" alt="Image agrandie">
+    </div>
+
+    <script>
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const thumbnails = document.querySelectorAll('.thumbnail');
+
+        thumbnails.forEach(thumbnail => {
+            thumbnail.addEventListener('click', () => {
+                lightboxImg.src = thumbnail.src;
+                lightbox.style.display = 'flex';
+            });
+        });
+
+        lightbox.addEventListener('click', (event) => {
+            if (event.target !== lightboxImg) {
+                lightbox.style.display = 'none';
+            }
+        });
+    </script>
+    
+    
+  
+  <script>
+    function toggleLanguage(lang) {
+        const frContent = document.getElementById('fr');
+        const enContent = document.getElementById('en');
+    
+        if (lang === 'fr') {
+            frContent.style.display = 'block';
+            enContent.style.display = 'none';
+        } else if (lang === 'en') {
+            frContent.style.display = 'none';
+            enContent.style.display = 'block';
+        }
+    }
+    </script>
+
+<!-- Menu déroulant pour changer de palette -->
+<!--<label for="themeSelect">Choisir un thème :</label>-->
+<select class="bouton-theme" id="themeSelect">
+    <option class="select-select" value="orange-theme">Orange</option>
+    <option class="select-select" value="yellow-theme">Jaune</option>
+    <option class="select-select" value="purple-theme">Violet</option>
+    <option class="select-select" value="dark-theme">Nuit</option>
+  </select>
+
+
+  <script>
+    // Récupérer le menu déroulant
+const themeSelect = document.getElementById('themeSelect');
+
+// Charger le thème sauvegardé depuis localStorage au chargement de la page
+document.addEventListener('DOMContentLoaded', () => {
+    const savedTheme = localStorage.getItem('selectedTheme'); // Récupérer le thème sauvegardé
+    if (savedTheme) {
+        // Appliquer le thème sauvegardé
+        document.body.classList.add(savedTheme);
+        themeSelect.value = savedTheme; // Mettre à jour le menu déroulant
+    }
+});
+
+// Ajouter un écouteur d'événements au menu déroulant
+themeSelect.addEventListener('change', () => {
+    // Vérifier si un thème est sélectionné
+    const selectedTheme = themeSelect.value;
+
+    // Retirer toutes les classes de thème
+    document.body.classList.remove('orange-theme', 'yellow-theme', 'purple-theme', 'dark-theme');
+
+    // Ajouter la classe correspondant au thème sélectionné, si elle existe
+    if (selectedTheme) {
+        document.body.classList.add(selectedTheme);
+
+        // Sauvegarder le thème sélectionné dans localStorage
+        localStorage.setItem('selectedTheme', selectedTheme);
+    }
+});
+  </script>
+
+    <!-- Bouton retour en haut -->
+    <a href="#" class="back-to-top">
+        <img class="fleche" src="img/favcon.png" alt="⬆">
+        </a>
+
+
+    <script>
+        // Sélectionner le bouton
+        const backToTopButton = document.querySelector('.back-to-top');
+
+        // Afficher le bouton quand on scroll vers le bas
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) { // Afficher le bouton après 300px de scroll
+            backToTopButton.classList.add('show');
+            } else {
+            backToTopButton.classList.remove('show');
+            }
+        });
+    </script>
+
+    <script>
+        const projets = document.querySelectorAll('.projet');
+        projets.forEach(projet => {
+        projet.addEventListener('mouseover', () => {
+            projets.forEach(p => p.classList.add('unactive'));
+            projet.classList.remove('unactive');
+        });
+        projet.addEventListener('mouseout', () => {
+         projets.forEach(p => p.classList.remove('unactive'));
+        });
+        });
+    </script>
+
+    <div class="footer">
+            <p>© 2024 Marine Chantriaux - typographie : DM Sans par Colophon Foundry</p>
+    </div>
+    
 </body>

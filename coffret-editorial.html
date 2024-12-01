@@ -13,6 +13,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <header class="header">
         <!-- https://jenseign.com/le-h1-logo/ -->
@@ -36,78 +37,159 @@
             <div class="image-coffret">
                 <img src="img/IMG_5814_modif_copie.jpg"alt="aperçu coffret">
             </div>
+
             <div class="description">
-                <h2>2024</h2>
-                <h3>Création d'un coffret éditorial</h3>
-                <p>Recherches graphiques, iconographique et textuelles autour d'un artiste. Interprétation éditoriale et personnelle de son univers et de son travail. <br>
-                Le coffret comprend trois livrets, quatre posters, un vinyle, une pochette de stickers, quatre badges ainsi qu'un t-shirt sérigraphié. 
-                <br> La première édition est un travail davantage subjectif qui correspond à une restitution graphique et personnelle de l'univers d'une quarantaine de musiques du groupe. Chaque image a été réalisée en écoutant la musique correspondante, avec des techniques diversifiées telles que la modélisation 3D, le montage photo, le dessin traditionnel ou vectoriel.
-                <br>La deuxième édition restitue une large sélection d'interviews du groupe ou de citations des membres fictifs issues de leurs films ou vidéos.
-                <br>Enfin, la troisième édition de ce coffret met en valeur le travail d'auteur sous la facette du sampling, parfois associé à tort au plagiat ou à un manque de créativité.
-                </p>
+                <div class="introintro">
+                    <a class="retour" href="index.html">⭠ RETOUR</a>
+                    <div class="fr-en">
+                        <button class="fr-en" onclick="toggleLanguage('fr')">FR</button>
+                        <button class="fr-en" onclick="toggleLanguage('en')">EN</button>
+                    </div>
+                </div>
+
+                <div class="fr" id="fr">
+                    <div class="h2 surlign">                    
+                        <p>Coffret éditorial</p>
+                    </div>
+                    <div class="h3">
+                        <p>2024 - Édition, direction artistique</p>
+                    </div>
+                    <p>Recherches graphiques, iconographique et textuelles autour d'un artiste. Interprétation éditoriale et personnelle de son univers et de son travail. <br>
+                    Le coffret comprend 3 livrets, 4 posters, 1 vinyle, 1 pochette de stickers, 4 badges ainsi qu'1 t-shirt sérigraphié. 
+                    <br> La première édition est un travail davantage subjectif qui correspond à une restitution graphique et personnelle de l'univers d'une quarantaine de musiques du groupe. Chaque image a été réalisée en écoutant la musique correspondante, avec des techniques diversifiées telles que la modélisation 3D, le montage photo, le dessin traditionnel ou vectoriel.
+                    <br>La deuxième édition restitue une large sélection d'interviews du groupe ou de citations des membres fictifs issues de leurs films ou vidéos.
+                    <br>Enfin, la troisième édition de ce coffret met en valeur le travail d'auteur sous la facette du sampling, parfois associé à tort au plagiat ou à un manque de créativité.
+                    </p>
+                </div>
+                <div class="en" id="en" style="display: none;">
+                    <div class="h2">                    
+                        <p>Editorial box</p>
+                    </div>
+                    <div class="h3">
+                        <p>2024 - Editorial, art direction</p>
+                    </div>
+                        <p>Graphic, iconographic and textual research about an artist. Editorial and personal interpretation of his world and his work. <br>
+                            The box set includes 3 booklets, 4 posters, 1 vinyl record, 1 sticker pack, 4 badges and 1 screen-printed t-shirt. 
+                            <br> The first edition is a more subjective work which corresponds to a graphic and personal restitution of the universe of around forty music from the group. Each image was created while listening to the corresponding music, with diverse techniques such as 3D modeling, photo montage, traditional or vector drawing.
+                            <br>The second edition restores a large selection of interviews with the group or quotes from fictitious members from their films or videos.
+                            <br>Finally, the third edition of this box set highlights the author's work under the facet of sampling, sometimes wrongly associated with plagiarism or a lack of creativity.</p>
+                    </div>
+                </div>
             </div>
         </div>
 
         <div class="page-projet-galerie">
             <div class="galerie-coffret">
-                <img src="img/IMG_5782_modif.jpg" alt="coffret fermé">
-                <img class="coffret-a" src="img/IMG_5829_modif_34.jpg" alt="ouverture du coffret">
-                <img src="img/IMG_5792_modif.jpg" alt="coffret ouvert">
-                <img src="img/IMG_5880_modif.jpg" alt="édition1 mur">
-                
-                <img src="img/IMG_5877_modif.jpg" alt="édition1 plastic beach">
-                <img src="img/IMG_5942_modif.jpg" alt="édition1 eventail">
-                <img  class="coffret-a" src="img/IMG_5871_modif.jpg" alt="édition1 kids with guns">
-                <img src="img/IMG_5966_modif.jpg" alt="les posters">
-                <img src="img/IMG_5973_modif.jpg" alt="poster principal">
-                <img src="img/IMG_5840_modif.jpg" alt="édition3 couv">
-                <img src="img/IMG_5890_modif.jpg" alt="édition3 gros plan">
-                <img src="img/IMG_5924_modif.jpg" alt="édition3 extrait">
-                <img src="img/IMG_5943_modif.jpg" alt="vinyle">
-                <img src="img/IMG_5977_modif.jpg" alt="tshirt">
-                <img src="img/IMG_5856_modif.jpg" alt="édition2 couv">
-                <img class="coffret-a" src="img/IMG_5905_modif.jpg" alt="édition2 full metal jacket">
-                <img src="img/IMG_5912_modif.jpg" alt="édition2 gros plan">
-                <img src="img/IMG_5903_modif.jpg" alt="édition2 visages">
+                <img src="img/IMG_5782_modif.jpg" alt="coffret fermé"class="thumbnail">
+                <img class="coffret-a thumbnail" src="img/IMG_5829_modif.jpg" alt="ouverture du coffret">
+                <img src="img/IMG_5792_modif.jpg" alt="coffret ouvert" class="thumbnail">
+                <img src="img/IMG_5880_modif.jpg" alt="édition1 mur" class="thumbnail">
+                <img src="img/IMG_5877_modif.jpg" alt="édition1 plastic beach"class="thumbnail">
+                <img src="img/IMG_5942_modif.jpg" alt="édition1 eventail"class="thumbnail">
+                <img  class="coffret-a thumbnail" src="img/IMG_5871_modif.jpg" alt="édition1 kids with guns">
+                <img src="img/IMG_5966_modif.jpg" alt="les posters"class="thumbnail">
+                <img src="img/IMG_5973_modif.jpg" alt="poster principal"class="thumbnail">
+                <img src="img/IMG_5840_modif.jpg" alt="édition3 couv"class="thumbnail">
+                <img src="img/IMG_5890_modif.jpg" alt="édition3 gros plan"class="thumbnail">
+                <img src="img/IMG_5924_modif.jpg" alt="édition3 extrait"class="thumbnail">
+                <img src="img/IMG_5943_modif.jpg" alt="vinyle"class="thumbnail">
+                <img src="img/IMG_5977_modif.jpg" alt="tshirt"class="thumbnail">
+                <img src="img/IMG_5856_modif.jpg" alt="édition2 couv"class="thumbnail">
+                <img class="coffret-a thumbnail" src="img/IMG_5905_modif.jpg" alt="édition2 full metal jacket">
+                <img src="img/IMG_5912_modif.jpg" alt="édition2 gros plan"class="thumbnail">
+                <img src="img/IMG_5903_modif.jpg" alt="édition2 visages"class="thumbnail">
             </div>
         </div>
 
     </div>
 
-    <!-- Menu déroulant pour changer de palette -->
+    <div id="lightbox" class="lightbox">
+        <img id="lightbox-img" src="" alt="Image agrandie">
+    </div>
+
+    <script>
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const thumbnails = document.querySelectorAll('.thumbnail');
+
+        thumbnails.forEach(thumbnail => {
+            thumbnail.addEventListener('click', () => {
+                lightboxImg.src = thumbnail.src;
+                lightbox.style.display = 'flex';
+            });
+        });
+
+        lightbox.addEventListener('click', (event) => {
+            if (event.target !== lightboxImg) {
+                lightbox.style.display = 'none';
+            }
+        });
+    </script>
+    
+    
+  
+  <script>
+    function toggleLanguage(lang) {
+        const frContent = document.getElementById('fr');
+        const enContent = document.getElementById('en');
+    
+        if (lang === 'fr') {
+            frContent.style.display = 'block';
+            enContent.style.display = 'none';
+        } else if (lang === 'en') {
+            frContent.style.display = 'none';
+            enContent.style.display = 'block';
+        }
+    }
+    </script>
+
+<!-- Menu déroulant pour changer de palette -->
 <!--<label for="themeSelect">Choisir un thème :</label>-->
 <select class="bouton-theme" id="themeSelect">
     <option class="select-select" value="orange-theme">Orange</option>
-    <option class="select-select" value="blue-theme">Bleu</option>
-    <option class="select-select" value="pink-theme">Rose</option>
-    <option class="select-select" value="night-theme">Nuit</option>
+    <option class="select-select" value="yellow-theme">Jaune</option>
+    <option class="select-select" value="purple-theme">Violet</option>
+    <option class="select-select" value="dark-theme">Nuit</option>
   </select>
-  
+
+
   <script>
     // Récupérer le menu déroulant
-    const themeSelect = document.getElementById('themeSelect');
-    
-    // Ajouter un écouteur d'événements au menu déroulant
-    themeSelect.addEventListener('change', () => {
-      // Vérifier si le thème sélectionné est sombre ou clair
-      const selectedTheme = themeSelect.value;
-  
-       // Retirer toutes les classes de thème
-       document.body.classList.remove('orange-theme', 'blue-theme', 'pink-theme', 'night-theme');
-      
-      // Ajouter la classe correspondant au thème sélectionné
-      if (selectedTheme) {
+const themeSelect = document.getElementById('themeSelect');
+
+// Charger le thème sauvegardé depuis localStorage au chargement de la page
+document.addEventListener('DOMContentLoaded', () => {
+    const savedTheme = localStorage.getItem('selectedTheme'); // Récupérer le thème sauvegardé
+    if (savedTheme) {
+        // Appliquer le thème sauvegardé
+        document.body.classList.add(savedTheme);
+        themeSelect.value = savedTheme; // Mettre à jour le menu déroulant
+    }
+});
+
+// Ajouter un écouteur d'événements au menu déroulant
+themeSelect.addEventListener('change', () => {
+    // Vérifier si un thème est sélectionné
+    const selectedTheme = themeSelect.value;
+
+    // Retirer toutes les classes de thème
+    document.body.classList.remove('orange-theme', 'yellow-theme', 'purple-theme', 'dark-theme');
+
+    // Ajouter la classe correspondant au thème sélectionné, si elle existe
+    if (selectedTheme) {
         document.body.classList.add(selectedTheme);
-      }
-    });
+
+        // Sauvegarder le thème sélectionné dans localStorage
+        localStorage.setItem('selectedTheme', selectedTheme);
+    }
+});
   </script>
 
     <!-- Bouton retour en haut -->
     <a href="#" class="back-to-top">
-        <img class="fleche" src="img/favcon.png" alt="flèche">
+        <img class="fleche" src="img/favcon.png" alt="⬆">
         </a>
 
-        ⬆ Retour en haut
 
     <script>
         // Sélectionner le bouton
@@ -139,6 +221,5 @@
     <div class="footer">
             <p>© 2024 Marine Chantriaux - typographie : DM Sans par Colophon Foundry</p>
     </div>
-        
 
 </body>
