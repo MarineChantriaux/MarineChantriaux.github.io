@@ -104,7 +104,7 @@
         <img class="flechesindex no-dark-index" src="fleches.svg" alt="fleches" width="300">
         <img class="flechesindex dark-index" src="fleches_nuit.svg" alt="fleches" width="300">
 
-        <p class="h1 indexstage1"> Vous  <a class= "surlign" href="a-propos.html" target="_blank">aimez</a> ce que vous voyez?</p>
+        <p class="h1 indexstage1"> Vous  <a class= "surlign3" href="a-propos.html" target="_blank">aimez</a> ce que vous voyez?</p>
     
         <p class="h1 indexstage2"><a href="a-propos.html">Faisons connaissance</a></p>
     </div>
@@ -112,9 +112,9 @@
     <!-- Menu déroulant pour changer de palette -->
 <!--<label for="themeSelect">Choisir un thème :</label>-->
 <select class="bouton-theme" id="themeSelect">
+    <option class="select-select" value="pink-theme">Rose</option>
+    <option class="select-select" value="blue-theme">Bleu</option>
     <option class="select-select" value="orange-theme">Orange</option>
-    <option class="select-select" value="yellow-theme">Jaune</option>
-    <option class="select-select" value="purple-theme">Violet</option>
     <option class="select-select" value="dark-theme">Nuit</option>
   </select>
   
@@ -138,7 +138,7 @@ themeSelect.addEventListener('change', () => {
     const selectedTheme = themeSelect.value;
 
     // Retirer toutes les classes de thème
-    document.body.classList.remove('orange-theme', 'yellow-theme', 'purple-theme', 'dark-theme');
+    document.body.classList.remove('pink-theme', 'blue-theme', 'orange-theme', 'dark-theme');
 
     // Ajouter la classe correspondant au thème sélectionné, si elle existe
     if (selectedTheme) {

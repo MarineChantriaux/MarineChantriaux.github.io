@@ -18,16 +18,9 @@
 html{
     scroll-behavior: smooth; /* pour un scroll plus fluide */    
 }
-body {
-    font-family: 'DM Sans', sans-serif;
-    margin: 0;
-    padding: 0;
-    margin: 0; /* pour éviter les marges par défaut du navigateur */
-    line-height: 1.4; /* hauteur de ligne pour la lecture à l'écran*/
-    background-color: var(--background-color);
-    scroll-behavior: smooth;
-    color: var(--text-color);
-}
+
+
+
 
 img{
     max-width: 100%;
@@ -57,9 +50,6 @@ img{
     line-height: 1;
 }
 
-.page-a-propos p {
-    margin-bottom: 20px;
-}
 
 .h2 p{
     font-size: 30px;
@@ -86,13 +76,17 @@ img{
     font-style: italic;
 }
 
+.bold{
+    font-weight: 700;
+}
+
 
 figure{ /*image et légende dans même balise*/ 
     margin: 0; /* pour éviter les marges par défaut du navigateur */
 }
 
 .header {
-    background-color: var(--header-background-color);
+    /* background-color: var(--header-background-color); */
     padding:0 24px; 
     height: 120px;/* pour garder le ratio de l'image */
     display: grid; /* pour pouvoir utiliser grid-template-columns */
@@ -276,6 +270,10 @@ figure{ /*image et légende dans même balise*/
 
 .indexstage:hover .indexstage2{
     display: block;
+}
+
+.surlign3{
+    color: var(--text-color-surlign-3);
 }
 
 .flechesindex{
@@ -489,23 +487,29 @@ body.dark-theme .no-dark-retour{
     justify-content: center;
 }
 
-.presentation p{
-    font-size: 20px;
+@media (min-width: 0px) and (max-width: 767px) {
+    .presentation{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
 }
 
-@media (min-width: 1024px) {
-    .comptact{
+@media (min-width: 768px) {
+    .presentation{
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        margin-top: 30px;
+        grid-template-columns: 2fr 1fr;
     }
+}
+
+.presentation p{
+    font-size: 20px;
 }
 
 
 .competences{
     gap: 24px;
-    margin-top: 15px;
-    margin-right: 45px;
+    margin-top: 50px;
+    margin-right: 600px;
     align-items: center;
     justify-content: center;
     font-size: 18px;
@@ -550,28 +554,17 @@ body.dark-theme .no-dark-retour{
 
 
 .contact{
-    transform: translate(-70%, 30%);
-    margin-top: 50px;
-    margin-bottom: 60px;
-}
-
-@media (min-width: 0px) and (max-width: 767px) {
-    .contact{
-        transform: translate(20%, 50%);
-    }
-}
-
-@media (min-width: 768px) {
-    .contact{
-        width: 480px; /* Set a fixed width */
-        justify-items: right;
-    }
+    margin-top: 8px;
+    background: var(--about-gradient);
+    padding: 20px;
+    margin-bottom: 0px;
+    border-radius: 20px;
 }
 
 .contact p {
-    position: relative; /* Permet de garder le texte au-dessus de l'image */
     font-size: 18px; /* Ajustez la taille du texte */
-    z-index: 1; /* S'assurer que le texte soit au-dessus de l'image */
+    text-align: right;
+    margin-top: -5px;
 }
 
 .contact a{
@@ -584,9 +577,6 @@ body.dark-theme .no-dark-retour{
 }
 
 @media (min-width: 0px) and (max-width: 767px) {
-    .lienscontact{
-        transform: translate(-10%, -10%);
-    }
 
     .contact p{
         font-size: 16px;
@@ -594,36 +584,6 @@ body.dark-theme .no-dark-retour{
 
 }
 
-@media (min-width: 768px) {
-    .lienscontact{
-        margin-left: 500px;
-        transform: translate(-10%, 10%);
-    }
-}
-
-.flechesabout{
-    max-width: none;
-    position: absolute;
-    z-index: -1; /* Place l'image derrière le texte */
-    transform: translate(-22%, -35%) rotate(-10deg);
-}
-
-@media (min-width: 0px) and (max-width: 767px) {
-    .flechesabout{
-        transform: translate(-25%, -35%) rotate(-10deg);
-        width: 330px; /* Set a fixed width */
-        height: 230px; /* Set a fixed height */
-    }
-}
-
-@media (min-width: 768px) {
-    .flechesabout{
-        transform: translate(-22%, -35%) rotate(-10deg);
-        width: 480px; /* Set a fixed width */
-        height: 380px; /* Set a fixed height */
-        margin-left: 500px;
-    }
-}
 
 .dark {
     display: none;
@@ -726,6 +686,7 @@ button {
         display: grid;
         grid-template-columns: 2fr 1fr;
         padding: 50px;
+        padding-bottom: 0px;
         gap: 24px;
     }
 }
@@ -826,6 +787,8 @@ button {
 .page-projet-galerie{
     column-gap: 10px;
     height: auto;
+    /* background: linear-gradient(180deg, #ffbed7 0%, #ff307f 7% , #ff307f 93%, #ffbed7 100%); */
+    padding-top: 50px;
 }
 
 .galerie-coffret {
@@ -916,77 +879,176 @@ button {
     }
 }
 
+.riso{
+    height: 2000px;
+    background: linear-gradient(180deg, rgb(37, 255, 62) 0%, rgb(198, 21, 21) 100%);
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    margin: 0; /* pour éviter les marges par défaut du navigateur */
+    line-height: 1.4; /* hauteur de ligne pour la lecture à l'écran*/
+    /* background-color: var(--background-color); */
+    scroll-behavior: smooth;
+    color: var(--text-color);
+    /* background: linear-gradient(180deg, #ff307f 6%, #ffbed7 16%,#ffbed7 55%, #ff307f 93%, #ffbed7 100%); */
+    background: var(--body-gradient);
+}
+
+
 /* Palette claire */
 :root {
-    --background-color: #ffbed7;
-    --header-background-color: #ff2600;
+    /* --background-color: #ffbed7;
+    --header-background-color: #ff2600; */
     --select-background-color:#ff2600;
-    --border-color: #ff2600;
+    --border-color: #ff307f;
     --color-span: #ffbed7;
     --text-color-surlign: #ff307f;
     --text-color-surlign-2: #ff2600;
+    --text-color-surlign-3: #ffbed7;
     --button-background-color: #ff307f;
     --lang-button-text: #ffbed7;
-    --background-bouton-theme: #ff2600;
+    --background-bouton-theme: #ff307f;
     --texte-bouton-theme: #fff2f7;
-    --select-theme-hover-color: #ff307f;
+    --select-theme-hover-color: #fd9fc3;
     --backtotop-background: #ff307f;
     --backtotop-hover-background: #ff2600;
+    --about-gradient: linear-gradient(to right, #ffbed7 15%, #ffaaca 100%);
   }
 
-  /* Palette sombre */
-  .yellow-theme {
-    --background-color: #f6fba2;
-    --header-background-color: #ff64b9; 
+  /* Mobile gradient */
+@media (min-width: 0px) and (max-width: 767px) {
+    :root {
+        --body-gradient: linear-gradient(180deg, 
+            #ff307f 0px, 
+            #ff307f 10px, 
+            #ffbed7 100px, 
+            #ffbed7 2000px, 
+            #ff307f 2800px, 
+            #ff307f 900px
+        );
+    }
+}
+
+/* Computer gradient */
+@media (min-width: 1024px) {
+    :root {
+        --body-gradient: linear-gradient(180deg, 
+            #ff307f 0px, 
+            #ff307f 40px, 
+            #ffbed7 150px, 
+            #ffbed7 750px, 
+            #ff307f 880px, 
+            #ff307f 900px
+        );
+    }
+}
+
+  .blue-theme {
+    /* --background-color: #ffbed7;
+    --header-background-color: #ff2600; */
     --select-background-color: #a7ff03;
     --border-color: #006aff;
     --text-color: #1a0d12;
-    --text-color-surlign: #006aff;
-    --text-color-surlign-2: #ff64b9;
-    --color-span: #ff64b9;
-    --button-background-color: #ff64b9;
+    --text-color-surlign: #f6fba2;
+    --text-color-surlign-2: #4f30ff;
+    --text-color-surlign-3: #f6fba2;
+    --color-span: #f6fba2;
+    --button-background-color: #4f30ff;
     --lang-button-text: #f6fba2;
-    --background-bouton-theme: #006aff;
+    --background-bouton-theme: #4f30ff;
     --texte-bouton-theme: #f6fba2;
-    --select-theme-hover-color: #ff64b9;
-    --backtotop-background: #006aff;
-    --backtotop-hover-background: #ff64b9;
+    --select-theme-hover-color: #62d0ff;
+    --backtotop-background: #4f30ff;
+    --backtotop-hover-background: #f6fba2;
+    --about-gradient: linear-gradient(to right, #62d0ff 15%, #f6fba2 100%);
   }
 
-  .purple-theme{
-    --background-color: #8064fc;
-    --header-background-color: #00ff6a; 
+    /* Mobile gradient */
+@media (min-width: 0px) and (max-width: 767px) {
+    
+    .blue-theme{
+        --body-gradient: linear-gradient(180deg, 
+        #4f30ff 0px, 
+        #4f30ff 10px, 
+        #62d0ff 100px, 
+        #62d0ff 2000px, 
+        #4f30ff 2800px, 
+        #4f30ff 900px
+    );
+    }
+}
+
+/* Computer gradient */
+@media (min-width: 1024px) {
+    .blue-theme {
+        --body-gradient: linear-gradient(180deg, 
+        #4f30ff 0px, 
+        #4f30ff 30px, 
+        #62d0ff 150px, 
+        #62d0ff 750px, 
+        #4f30ff 880px, 
+        #4f30ff 900px
+    );
+    }
+}
+
+  .orange-theme{
+    /* --background-color: #8064fc;
+    --header-background-color: #00ff6a;  */
+    --body-gradient: linear-gradient(180deg, 
+        #ff64a2 0px, 
+        #ff64a2 40px, 
+        #f78e44 250px, 
+        #f78e44 750px, 
+        #ff64a2 880px, 
+        #ff64a2 900px
+    );
     --select-background-color: #00ff6a;
-    --border-color: #ff83cf;
+    --border-color: #ff64a2;
     --text-color: #fff7ff;
-    --text-color-surlign: #ff83cf;
+    --text-color-surlign: #e44400;
     --text-color-surlign-2: #00ff6a;
-    --color-span: #00ff6a;
-    --button-background-color: #00ff6a;
-    --lang-button-text: #8064fc;
-    --background-bouton-theme: #00ff6a;
-    --texte-bouton-theme: #8064fc;
-    --select-theme-hover-color: #ff83cf;
-    --backtotop-background: #00ff6a;
-    --backtotop-hover-background: #ff83cf;
+    --text-color-surlign-3: #e44400;
+    --color-span: #f78e44;
+    --button-background-color: #ff64a2;
+    --lang-button-text: #fff7ff;
+    --background-bouton-theme: #ff64a2;
+    --texte-bouton-theme: #fff7ff;
+    --select-theme-hover-color: #f78e44;
+    --backtotop-background: #ff64a2;
+    --backtotop-hover-background: #f78e44;
+    --about-gradient: linear-gradient(to right, #f78e44 15%, #e44400 100%);
   }
 
-  .dark-theme{
-    --background-color: #040025;
-    --header-background-color: #f52fa9; 
+  .ark-theme{
+    /* --background-color: #040025;
+    --header-background-color: #f52fa9;  */
+    --body-gradient: linear-gradient(180deg, 
+        #f52fa9 0px, 
+        #f52fa9 40px, 
+        #000925 150px, 
+        #000925 750px, 
+        #f52fa9 880px, 
+        #f52fa9 900px
+    );
     --select-background-color: #a7ff03;
     --border-color: #a7ff03;
     --text-color: #fff7ff;
     --text-color-surlign: #a7ff03;
     --text-color-surlign-2: #f52fa9;
+    --text-color-surlign-3: #f6fba2;
     --color-span: #a7ff03;
     --button-background-color: #f52fa9;
     --lang-button-text: #040025;
-    --background-bouton-theme: #f52fa9;
+    --background-bouton-theme: #a7ff03;
     --texte-bouton-theme: #040025;
-    --select-theme-hover-color: #a7ff03;
+    --select-theme-hover-color: #f52fa9;
     --backtotop-background: #f52fa9;
     --backtotop-hover-background: #a7ff03;
+    --gradient: linear-gradient(to right, #040025 15%, #f52fa9 100%);
   }
 
 

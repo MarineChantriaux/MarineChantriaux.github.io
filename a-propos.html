@@ -36,11 +36,28 @@
         <div class="presentation"> 
             <p> Je m’appelle Marine Chantriaux et je suis étudiante en design graphique.
                 <br>Aujourd'hui en deuxième année de DNA à l’<a class= "surlign" href="https://www.esad-amiens.fr/" target="_blank">ESAD d’Amiens</a>,
-                j’entretiens un intérêt particulier pour l’affiche vectrice de pensée, la risographie vivante, sensible et imparfaite ainsi que le design numérique (vidéo, motion-design, web, UI/UX).
-            Volontaire, j'arbore plusieurs casquettes: je suis à la fois déléguée, secrétaire du bureau des étudiants et tutrice d’une élève de première année.  
-            <br><a class= "surlign">Je suis à la recherche d’un stage</a> de 4 à 6 semaines à partir de fin juin 2025.
-        </p> </div>
-        <div class="comptact">
+                j’entretiens un&nbsp;intérêt particulier pour l’affiche vectrice de pensée, la risographie vivante, sensible et imparfaite ainsi que le design numérique (vidéo, motion-design, web, UI/UX).
+            Volontaire, j'arbore plusieurs casquettes: je&nbsp;suis à&nbsp;la&nbsp;fois déléguée, secrétaire du bureau des étudiants et tutrice d’une élève de première année.  
+            <br><a class= "surlign bold">Je suis à la recherche d’un stage</a> de 4 à 6 semaines à partir de fin juin 2025.
+        </p> 
+        <div class="contact">
+            <div class="h2">
+                <p>Contactez-moi!</p>
+            </div>
+            <p class="lienscontact">
+                <a href="mailto: marine.chantriaux@gmail.com">marine.chantriaux@gmail.com</a>
+                <br><a href="https://instagram.com/graphic.ine">Instagram</a>
+            </p>
+            <div class="h2">
+                <p>Suivez-moi!</p>
+            </div>
+            <p class="lienscontact" style="margin-bottom: 0px;">
+                <a href="https://www.youtube.com/@MarineChantriaux">Youtube</a>
+                <br><a href="https://instagram.com/graphic.ine">Instagram</a>
+                <br><a href="https://linktr.ee/chantriauxmarine">Linktree</a>
+            </p>
+        </div>  
+    </div>
             <div class="competences">
                 <p>[formations]:<p>bac std2a</p>-<p>dna ESAD amiens</p>
                 <br><p>[compétences graphiques]:<p>poster</p>-<p>édition</p>-<p>typographie</p>-<p>webdesign</p>-<p>html/css</p>-<p>montage vidéo</p>-<p>photographie</p>-<p>identité graphique</p>
@@ -48,19 +65,7 @@
                 <br><p>[logiciels]:<p>indesign</p>-<p>illustrator</p>-<p>photoshop</p>-<p>aftereffects</p>-<p>premierepro</p>-<p>davinciresolve</p>-<p>vscode</p>
                 <br><p>google docs</p>-<p>sheets</p>-<p>drive</p>-<p>slides</p>-<p>forms</p>
             </div>
-            <div class="contact">
-                <div data-theme="nuit">
-                    <img class="flechesabout no-dark" src="fleches.svg" alt="fleches" width="280" height="180">
-                    <img class="flechesabout dark" src="fleches_nuit.svg" alt="fleches" width="280" height="180">
-                </div>
-                <p class="lienscontact">
-                    <a href="mailto: marine.chantriaux@gmail.com">marine.chantriaux@gmail.com</a>
-                    <br><a href="https://www.youtube.com/@MarineChantriaux">Youtube</a>
-                    <br><a href="https://instagram.com/graphic.ine">Instagram</a>
-                    <br><a href="https://linktr.ee/chantriauxmarine">Linktree</a>
-                </p>
-            </div>    
-        </div>
+  
 
     </div>
 
@@ -68,9 +73,9 @@
 <!-- Menu déroulant pour changer de palette -->
 <!--<label for="themeSelect">Choisir un thème :</label>-->
 <select class="bouton-theme" id="themeSelect">
+    <option class="select-select" value="pink-theme">Rose</option>
+    <option class="select-select" value="blue-theme">Bleu</option>
     <option class="select-select" value="orange-theme">Orange</option>
-    <option class="select-select" value="yellow-theme">Jaune</option>
-    <option class="select-select" value="purple-theme">Violet</option>
     <option class="select-select" value="dark-theme">Nuit</option>
   </select>
   
@@ -94,7 +99,7 @@ themeSelect.addEventListener('change', () => {
     const selectedTheme = themeSelect.value;
 
     // Retirer toutes les classes de thème
-    document.body.classList.remove('orange-theme', 'yellow-theme', 'purple-theme', 'dark-theme');
+    document.body.classList.remove('pink-theme', 'blue-theme', 'orange-theme', 'dark-theme');
 
     // Ajouter la classe correspondant au thème sélectionné, si elle existe
     if (selectedTheme) {
