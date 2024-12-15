@@ -906,7 +906,7 @@ body {
     --border-color: #ff307f;
     --color-span: #ffbed7;
     --text-color-surlign: #ff307f;
-    --text-color-surlign-2: #ff2600;
+    --text-color-surlign-2: #90ff30;
     --text-color-surlign-3: #ffbed7;
     --button-background-color: #ff307f;
     --lang-button-text: #ffbed7;
@@ -933,7 +933,7 @@ body {
 }
 
 /* Computer gradient */
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
     :root {
         --body-gradient: linear-gradient(180deg, 
             #ff307f 0px, 
@@ -953,7 +953,7 @@ body {
     --border-color: #006aff;
     --text-color: #1a0d12;
     --text-color-surlign: #f6fba2;
-    --text-color-surlign-2: #4f30ff;
+    --text-color-surlign-2: #90ff30;
     --text-color-surlign-3: #f6fba2;
     --color-span: #f6fba2;
     --button-background-color: #4f30ff;
@@ -982,7 +982,7 @@ body {
 }
 
 /* Computer gradient */
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
     .blue-theme {
         --body-gradient: linear-gradient(180deg, 
         #4f30ff 0px, 
@@ -998,19 +998,11 @@ body {
   .orange-theme{
     /* --background-color: #8064fc;
     --header-background-color: #00ff6a;  */
-    --body-gradient: linear-gradient(180deg, 
-        #ff64a2 0px, 
-        #ff64a2 40px, 
-        #f78e44 250px, 
-        #f78e44 750px, 
-        #ff64a2 880px, 
-        #ff64a2 900px
-    );
     --select-background-color: #00ff6a;
     --border-color: #ff64a2;
     --text-color: #fff7ff;
     --text-color-surlign: #e44400;
-    --text-color-surlign-2: #00ff6a;
+    --text-color-surlign-2: #90ff30;
     --text-color-surlign-3: #e44400;
     --color-span: #f78e44;
     --button-background-color: #ff64a2;
@@ -1022,6 +1014,35 @@ body {
     --backtotop-hover-background: #f78e44;
     --about-gradient: linear-gradient(to right, #f78e44 15%, #e44400 100%);
   }
+
+      /* Mobile gradient */
+@media (min-width: 0px) and (max-width: 767px) {
+
+    .orange-theme {
+         --body-gradient: linear-gradient(180deg, 
+        #ff64a2 0px, 
+        #ff64a2 10px, 
+        #f78e44 100px, 
+        #f78e44 2000px, 
+        #ff64a2 2800px, 
+        #ff64a2 900px
+    );
+}
+}
+
+/* Computer gradient */
+@media (min-width: 768px) {
+    .orange-theme {
+        --body-gradient: linear-gradient(180deg, 
+        #ff64a2 0px, 
+        #ff64a2 30px, 
+        #f78e44 150px, 
+        #f78e44 750px, 
+        #ff64a2 880px, 
+        #ff64a2 900px
+    );
+    }
+}
 
   .ark-theme{
     /* --background-color: #040025;
@@ -1081,3 +1102,4 @@ body {
       background-color: var(--select-theme-hover-color);
       border-color: var(--select-theme-hover-color);
     }
+    
