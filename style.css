@@ -276,15 +276,15 @@ figure{ /*image et légende dans même balise*/
     color: var(--text-color-surlign-3);
 }
 
-.flechesindex{
+.flechesindex {
     display: none;
     width: 400px;
     height: auto;
     position: absolute;
-    margin-left: 430px;
+    margin-left: 50%;
     z-index: -1;
-    transform: translate(0px, 10px);
-}
+    transform: translate(-50%,10px);
+  }
 
 .dark-index{
     filter: saturate(300%);
