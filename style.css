@@ -149,6 +149,9 @@ figure{ /*image et légende dans même balise*/
         margin-top: 5px;
         margin-bottom: 5px;
     }
+    .pc{
+        width: 110%;
+    }
 }
 
   /* Pour les écrans moyens (tablettes) */
@@ -159,8 +162,10 @@ figure{ /*image et légende dans même balise*/
     .header{
         height: 120px;
     }
+    .pc{
+        width: 120%;
+    }
 }
-
 
 
 
@@ -350,7 +355,7 @@ body.dark-theme .no-dark-index{  /*fleches.svg se cache en mode sombre*/
     text-decoration: none; /* remove underline */
     place-self: center;
     justify-content: center;
-    border: 8px solid transparent;
+    border: 12px solid transparent;
     border-radius: 20px;
     place-self: center stretch;
     opacity: 100;
@@ -416,7 +421,7 @@ body.dark-theme .no-dark-retour{
     border: 12px solid;
     border-color: var(--border-color);
     opacity: 1;
-    transition: border 0.2s ease, opacity 1s ease, border-radius 0.2s ease;
+    transition: all 0.3s ease;
         img{
             object-position: center; /* Centrer l'image lors du changement de taille */
             border-radius: 8px;
