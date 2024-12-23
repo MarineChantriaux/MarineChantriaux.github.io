@@ -675,6 +675,7 @@ button {
         padding: 50px;
         display: grid;
         grid-template-columns: 1fr;
+        padding-bottom: 0px;
     }
 }
 
