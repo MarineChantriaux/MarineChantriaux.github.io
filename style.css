@@ -409,7 +409,6 @@ body.dark-theme .no-dark-retour{
 .projet img{
     border-radius: 20px;
     max-width: 100%;
-    margin-bottom: -6px;
     width: 100%;
       height: 100%;
       object-fit: cover; /* Maintient la proportion de l'image sans la déformer */
@@ -884,9 +883,13 @@ button {
     }
 }
 
-.riso{
-    height: 2000px;
-    background: linear-gradient(180deg, rgb(37, 255, 62) 0%, rgb(198, 21, 21) 100%);
+.long{
+    grid-row: span 2;
+}
+
+.videoserigraphie{
+    border-radius: 10px;
+    width: auto;
 }
 
 body {

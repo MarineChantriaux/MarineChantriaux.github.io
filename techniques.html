@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marine Chantriaux - à propos</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <!-- favicon / mini-icone-->
+    <meta name="description" content="Marine Chantriaux">
+    <!-- meta description pr chaque page-->
+    <link rel="stylesheet" href="style.css"> <!-- Add the link to the external CSS file : raccourci link:css -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <!-- https://jenseign.com/le-h1-logo/ -->
+        <nav class="header-nav">
+            <a class="pc" href="index.html"><img src="picto-work.png" alt="projets"></a>
+        </nav>
+        <h1><a href="index.html"><img class="mobile "src="favicon.png" alt="Marine Chantriaux" width="120" height=""><img class="no-mobile "src="logo.svg" alt="Marine Chantriaux" width="117" height="51"></a></h1>
+        <nav class="header-nav"> 
+            <a href="a-propos.html">
+                <img src="picto-about.png" alt="a propos">
+            </a>
+            <!-- <a href="mailto: marine.chantriaux@gmail.com"><img src="picto-contact.png" alt="mail"></a> -->
+            <a href="https://instagram.com/graphic.ine"><img src="picto-insta.png" alt="instagram"></a>
+        </nav>
+    </header>
+
+    <div class="page-projet">
+        <div class="page-projet-intro">
+            <div class="image-coffret">
+                <img src="img/IMG-20240302-WA0023-copie.jpg" alt="dessins du worshop Scretch&Play">
+            </div>
+
+            <div class="description">
+                <div class="introintro">
+                    <a class="retour" href="index.html"><img class="fleche-retour no-dark-retour" src="fleche.svg" alt="⭠ RETOUR" width="25" height="41"></a>
+                    <a class="retour" href="index.html"><img class="fleche-retour dark-retour" src="fleche_nuit.svg" alt="⭠ RETOUR" width="25" height="41"></a>                    
+                    
+                    <div class="fr-en">
+                        <button class="fr-en" onclick="toggleLanguage('fr')">FR</button>
+                        <button class="fr-en" onclick="toggleLanguage('en')">EN</button>
+                    </div>
+                </div>
+
+                <div class="fr" id="fr">
+                    <div class="h2 surlign">                    
+                        <p>Techniques</p>
+                    </div>
+                    <div class="h3">
+                        <p>2022-2025 - Print, photo, technique</p>
+                    </div>
+                        <p>Voici un aperçu des différentes techniques et du savoir-faire que je développe: risographie, sérigraphie, 
+                            papier marbré, linogravure, modèle vivant, en passant par la reliure et les cyanotypes pour découvrir le laboratoire photographique de l’ESAD.
+
+                        </p>
+                </div>
+                <div class="en" id="en" style="display: none;">
+                    <div class="h2 surlign">                    
+                        <p>techniques</p>
+                    </div>
+                    <div class="h3">
+                        <p>2022-2025 - Print, photo, technique</p>
+                    </div>
+                        <p>This is a overview on different techniques that I've been working on during my studies: risography, screenprinting, 
+                            marbled paper, linocut, drawing, bookbinding, and cyanotypes to discover the ESAD's photographic laboratory.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="page-projet-galerie sketch">
+            <div class="galerie-coffret">
+                <img src="img/ping-pong fond.jpg" alt="ping-pong fond" class="thumbnail">
+                <img class="thumbnail coffret-a" src="img/riso-copie.jpg" alt="ping-pong closeup">
+                <img class="thumbnail" src="img/riso-copie.jpg" alt="ping-pong closeup">
+
+                <!-- <video class="videoserigraphie long" autoplay loop>
+                    <source src="videos/WhatsApp Vidéo 2024-02-22 à 16.27.59_233dc800.mp4" type="video/mp4">
+                    <source src="video.webm" type="video/webm">
+                    Ton navigateur ne supporte pas ma balise vidéo.
+                  </video> -->
+
+                <img src="img/20240212_172725.jpg" alt="dessin1" class="thumbnail">
+                <img class="thumbnail coffret-a" src="img/riso-copie.jpg" alt="ping-pong closeup">
+                <img class="thumbnail" src="img/riso-copie.jpg" alt="ping-pong closeup">
+
+                <img class="thumbnail" src="img/papier marbré-copie.png" alt="papier marbré">
+            </div>
+        </div>
+
+    </div>
+
+    <div id="lightbox" class="lightbox">
+        <img id="lightbox-img" src="" alt="Image agrandie">
+    </div>
+
+    <script>
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const thumbnails = document.querySelectorAll('.thumbnail');
+
+        thumbnails.forEach(thumbnail => {
+            thumbnail.addEventListener('click', () => {
+                lightboxImg.src = thumbnail.src;
+                lightbox.style.display = 'flex';
+            });
+        });
+
+        lightbox.addEventListener('click', (event) => {
+            if (event.target !== lightboxImg) {
+                lightbox.style.display = 'none';
+            }
+        });
+    </script>
+    
+    
+  
+  <script>
+    function toggleLanguage(lang) {
+        const frContent = document.getElementById('fr');
+        const enContent = document.getElementById('en');
+    
+        if (lang === 'fr') {
+            frContent.style.display = 'block';
+            enContent.style.display = 'none';
+        } else if (lang === 'en') {
+            frContent.style.display = 'none';
+            enContent.style.display = 'block';
+        }
+    }
+    </script>
+
+<!-- Menu déroulant pour changer de palette -->
+<!--<label for="themeSelect">Choisir un thème :</label>-->
+<select class="bouton-theme" id="themeSelect">
+    <option class="select-select" value="pink-theme">Rose</option>
+    <option class="select-select" value="blue-theme">Bleu</option>
+    <option class="select-select" value="orange-theme">Orange</option>
+    <option class="select-select" value="dark-theme">Nuit</option>
+  </select>
+
+
+  <script>
+    // Récupérer le menu déroulant
+const themeSelect = document.getElementById('themeSelect');
+
+// Charger le thème sauvegardé depuis localStorage au chargement de la page
+document.addEventListener('DOMContentLoaded', () => {
+    const savedTheme = localStorage.getItem('selectedTheme'); // Récupérer le thème sauvegardé
+    if (savedTheme) {
+        // Appliquer le thème sauvegardé
+        document.body.classList.add(savedTheme);
+        themeSelect.value = savedTheme; // Mettre à jour le menu déroulant
+    }
+});
+
+// Ajouter un écouteur d'événements au menu déroulant
+themeSelect.addEventListener('change', () => {
+    // Vérifier si un thème est sélectionné
+    const selectedTheme = themeSelect.value;
+
+    // Retirer toutes les classes de thème
+    document.body.classList.remove('pink-theme', 'blue-theme', 'orange-theme', 'dark-theme');
+
+    // Ajouter la classe correspondant au thème sélectionné, si elle existe
+    if (selectedTheme) {
+        document.body.classList.add(selectedTheme);
+
+        // Sauvegarder le thème sélectionné dans localStorage
+        localStorage.setItem('selectedTheme', selectedTheme);
+    }
+});
+  </script>
+
+    <!-- Bouton retour en haut -->
+    <a href="#" class="back-to-top">
+        <img class="fleche" src="fleche.svg" alt="⬆" width="25" height="41">
+        </a>
+
+
+    <script>
+        // Sélectionner le bouton
+        const backToTopButton = document.querySelector('.back-to-top');
+
+        // Afficher le bouton quand on scroll vers le bas
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) { // Afficher le bouton après 300px de scroll
+            backToTopButton.classList.add('show');
+            } else {
+            backToTopButton.classList.remove('show');
+            }
+        });
+    </script>
+
+    <script>
+        const projets = document.querySelectorAll('.projet');
+        projets.forEach(projet => {
+        projet.addEventListener('mouseover', () => {
+            projets.forEach(p => p.classList.add('unactive'));
+            projet.classList.remove('unactive');
+        });
+        projet.addEventListener('mouseout', () => {
+         projets.forEach(p => p.classList.remove('unactive'));
+        });
+        });
+    </script>
+
+    <div class="footer">
+            <p>© 2024 Marine Chantriaux - typographie : DM Sans par Colophon Foundry</p>
+    </div>
+        
+
+</body>

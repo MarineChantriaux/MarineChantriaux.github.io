@@ -29,48 +29,101 @@
         </nav>
     </header>
 
-    <div class="page-a-propos"> <!--main project à modifier-->
-        
-        <div class="presentation"> 
-            <p> En tant qu’étudiante en DNA design graphique à l’<a class= "surlign" href="https://www.esad-amiens.fr/" target="_blank">ESAD d’Amiens</a>,
-               je suis une graphiste en devenir, polyvalente et enthousiaste. La quête d'un visuel porteur de sens est au coeur de ma réflexion créative. Mon travail marque les esprits à travers le paradoxe, l'inattendu, le déconcertant. 
-               Ainsi, qu'il dénonce, critique, raconte, ou qu'il existe dans le seul but d'amuser la galerie, mon travail de graphiste porte un message, une émotion.
-               <!-- <br>Mon portrait chinois: <br>Un support éditorial: une affiche placardée dans la rue faisant sourire les passants par la crudité de son propos. 
-               <br>Une technique d'impression: la risographie vivante, sensible et imparfaite  -->
-               <br>Je développe une passion nouvelle pour le design numérique (vidéo, motion-design, web, UI/UX).
-            Volontaire, j'arbore plusieurs casquettes: je&nbsp;suis à&nbsp;la&nbsp;fois déléguée, secrétaire du bureau des étudiants et tutrice d’une élève de première année.  
-            <br><a class= "surlign bold">Je suis à la recherche d’un stage</a> de 4 à 6 semaines à partir de fin juin 2025.
-            <!-- <br> Volontaire<br>Engagée<br>Autonome<br>Enthousiaste<br> -->
-        </p> 
-        <div class="contact">
-            <div class="h2">
-                <p>Contactez-moi!</p>
+    <div class="page-projet">
+        <div class="page-projet-intro">
+            <div class="image-coffret">
+                <img src="img/raent-logo.jpg" alt="logo raent">
             </div>
-            <p class="lienscontact">
-                <a href="mailto: marine.chantriaux@gmail.com">marine.chantriaux@gmail.com</a>
-                <br><a href="https://instagram.com/graphic.ine">Instagram</a>
-            </p>
-            <div class="h2">
-                <p>Suivez-moi!</p>
+
+            <div class="description">
+                <div class="introintro">
+                    <a class="retour" href="index.html"><img class="fleche-retour no-dark-retour" src="fleche.svg" alt="⭠ RETOUR" width="25" height="41"></a>
+                    <a class="retour" href="index.html"><img class="fleche-retour dark-retour" src="fleche_nuit.svg" alt="⭠ RETOUR" width="25" height="41"></a>                    
+                    
+                    <div class="fr-en">
+                        <button class="fr-en" onclick="toggleLanguage('fr')">FR</button>
+                        <button class="fr-en" onclick="toggleLanguage('en')">EN</button>
+                    </div>
+                </div>
+
+                <div class="fr" id="fr">
+                    <div class="h2 surlign">                    
+                        <p>RÆNT</p>
+                    </div>
+                    <div class="h3">
+                        <p>2024 - Projet d'identité graphique en cours de conception</p>
+                    </div>
+                        <p>«Tu veux un problème?» <br>RÆNT est une société (fictive) proposant ses&nbsp;services afin de rendre à vos journées 
+                            inintéressantes le piquant qui leur manque. Nous&nbsp;sommes en train de concevoir son identité graphique.
+                        </p>
+                </div>
+                <div class="en" id="en" style="display: none;">
+                    <div class="h2 surlign">                    
+                        <p>J.O. Sketch&Play</p>
+                    </div>
+                    <div class="h3">
+                        <p>2024 - Graphic identity project in progress</p>
+                    </div>
+                        <p>«You want a problem?» <br>RÆNT is a (fictional) company offering its services to give your uninteresting days 
+                         the spice that they lack. We are in the process of designing its graphic identity.
+                        </p>
+                    </div>
+                </div>
             </div>
-            <p class="lienscontact" style="margin-bottom: 0px;">
-                <a href="https://www.youtube.com/@MarineChantriaux">Youtube</a>
-                <br><a href="https://instagram.com/graphic.ine">Instagram</a>
-                <br><a href="https://linktr.ee/chantriauxmarine">Linktree</a>
-            </p>
-        </div>  
+        </div>
+
+        <!-- <div class="page-projet-galerie sketch">
+            <div class="galerie-coffret">
+                <img src="img/20231005_163249.jpg" alt="figma" class="thumbnail">
+                <img class="thumbnail " src="img/20231012_172546.jpg" alt="tshirt table">
+                <img src="img/20231012_172557.jpg" alt="tshirt" class="thumbnail long">
+                <img src="img/20231108_184104.jpg" alt="dessins macu" class="thumbnail long">
+                <img src="img/20231108_185759.jpg" alt="stats vert transparence" class="thumbnail long">
+                <img class="thumbnail " src="img/20231004_170957.jpg" alt="tshirt table">
+            </div>
+        </div> -->
+
     </div>
-            <div class="competences">
-                <p>[formations]:<p>bac std2a</p>-<p>dna ESAD amiens</p>
-                <br><p>[compétences graphiques]:<p>poster</p>-<p>édition</p>-<p>typographie</p>-<p>webdesign</p>-<p>html/css</p>-<p>montage vidéo</p>-<p>photographie</p>-<p>identité graphique</p>
-                <br><p>[autres]:<p>permis B</p>-<p>tutorat</p>-<p>français courant</p>-<p>anglais B2</p>-<p>communication par mail</p>-<p>secrétariat d’association</p>-<p>gestion instagram</p></p>
-                <br><p>[logiciels]:<p>indesign</p>-<p>illustrator</p>-<p>photoshop</p>-<p>aftereffects</p>-<p>premierepro</p>-<p>davinciresolve</p>-<p>figma</p>-<p>vscode</p>
-                <br><p>google docs</p>-<p>sheets</p>-<p>drive</p>-<p>slides</p>-<p>forms</p>
-            </div>
+
+    <div id="lightbox" class="lightbox">
+        <img id="lightbox-img" src="" alt="Image agrandie">
+    </div>
+
+    <script>
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const thumbnails = document.querySelectorAll('.thumbnail');
+
+        thumbnails.forEach(thumbnail => {
+            thumbnail.addEventListener('click', () => {
+                lightboxImg.src = thumbnail.src;
+                lightbox.style.display = 'flex';
+            });
+        });
+
+        lightbox.addEventListener('click', (event) => {
+            if (event.target !== lightboxImg) {
+                lightbox.style.display = 'none';
+            }
+        });
+    </script>
+    
+    
   
-
-    </div>
-
+  <script>
+    function toggleLanguage(lang) {
+        const frContent = document.getElementById('fr');
+        const enContent = document.getElementById('en');
+    
+        if (lang === 'fr') {
+            frContent.style.display = 'block';
+            enContent.style.display = 'none';
+        } else if (lang === 'en') {
+            frContent.style.display = 'none';
+            enContent.style.display = 'block';
+        }
+    }
+    </script>
 
 <!-- Menu déroulant pour changer de palette -->
 <!--<label for="themeSelect">Choisir un thème :</label>-->
@@ -80,7 +133,8 @@
     <option class="select-select" value="orange-theme">Orange</option>
     <option class="select-select" value="dark-theme">Nuit</option>
   </select>
-  
+
+
   <script>
     // Récupérer le menu déroulant
 const themeSelect = document.getElementById('themeSelect');
@@ -149,5 +203,6 @@ themeSelect.addEventListener('change', () => {
     <div class="footer">
             <p>© 2024 Marine Chantriaux - typographie : DM Sans par Colophon Foundry</p>
     </div>
+        
 
 </body>

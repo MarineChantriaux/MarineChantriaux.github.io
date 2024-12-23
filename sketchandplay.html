@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marine Chantriaux - à propos</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <!-- favicon / mini-icone-->
+    <meta name="description" content="Marine Chantriaux">
+    <!-- meta description pr chaque page-->
+    <link rel="stylesheet" href="style.css"> <!-- Add the link to the external CSS file : raccourci link:css -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <!-- https://jenseign.com/le-h1-logo/ -->
+        <nav class="header-nav">
+            <a class="pc" href="index.html"><img src="picto-work.png" alt="projets"></a>
+        </nav>
+        <h1><a href="index.html"><img class="mobile "src="favicon.png" alt="Marine Chantriaux" width="120" height=""><img class="no-mobile "src="logo.svg" alt="Marine Chantriaux" width="117" height="51"></a></h1>
+        <nav class="header-nav"> 
+            <a href="a-propos.html">
+                <img src="picto-about.png" alt="a propos">
+            </a>
+            <!-- <a href="mailto: marine.chantriaux@gmail.com"><img src="picto-contact.png" alt="mail"></a> -->
+            <a href="https://instagram.com/graphic.ine"><img src="picto-insta.png" alt="instagram"></a>
+        </nav>
+    </header>
+
+    <div class="page-projet">
+        <div class="page-projet-intro">
+            <div class="image-coffret">
+                <img src="img/20231004_154649.jpg" alt="dessins du worshop Scretch&Play">
+            </div>
+
+            <div class="description">
+                <div class="introintro">
+                    <a class="retour" href="index.html"><img class="fleche-retour no-dark-retour" src="fleche.svg" alt="⭠ RETOUR" width="25" height="41"></a>
+                    <a class="retour" href="index.html"><img class="fleche-retour dark-retour" src="fleche_nuit.svg" alt="⭠ RETOUR" width="25" height="41"></a>                    
+                    
+                    <div class="fr-en">
+                        <button class="fr-en" onclick="toggleLanguage('fr')">FR</button>
+                        <button class="fr-en" onclick="toggleLanguage('en')">EN</button>
+                    </div>
+                </div>
+
+                <div class="fr" id="fr">
+                    <div class="h2 surlign">                    
+                        <p>J.O. Sketch&Play</p>
+                    </div>
+                    <div class="h3">
+                        <p>2023 - Workshop, exposition, merch, pictogrammes</p>
+                    </div>
+                        <p>A l'occasion des Jeux Olympiques de Paris 2024 et&nbsp;dans le cadre du festival IC.ON.IC d’Amiens Métropole,
+                            le designer et étudiant en EsadType Manau Quellec a organisé le workshop Sketch&Play, basé sur le dessin de
+                            pictogrammes à imprimer sur&nbsp;des t-shirts de foot personnalisés. Le designer typographique Ibrahim Kactioglu a également participé
+                            à l’organisation, et l’impression a pu être réalisée grâce au designer
+                            Thomas Signollet et&nbsp;sa&nbsp;presse à chaud imaginée dans le cadre de&nbsp;son&nbsp;projet de diplôme de l’ENSCI.
+                            Toute la classe de 1ère année, fraîchement arrivée à l’ESAD, a&nbsp;été&nbsp;invitée à participer
+                            à cet atelier. Le sol a&nbsp;été&nbsp;recouvert de nos pictogrammes dessinés à&nbsp;partir de trois catégories:
+                            autoportraits, sports et&nbsp;un logo pour le workshop.
+                            L’exposition finale a&nbsp;eu&nbsp;lieu à la Maison de la Culture d’Amiens du&nbsp;8&nbsp;novembre au 31 décembre 2023.
+                        
+                        </p>
+                </div>
+                <div class="en" id="en" style="display: none;">
+                    <div class="h2 surlign">                    
+                        <p>J.O. Sketch&Play</p>
+                    </div>
+                    <div class="h3">
+                        <p>2023 - Workshop, exhibition, merch, pictograms</p>
+                    </div>
+                        <p>Within the context of Paris 2024 Olympic Games and as part of Amiens’s IC.ON.IC festival,
+                            designer and EsadType student Manau Quellec organized the Sketch&Play workshop, based on the drawing of
+                            pictograms to print on personalized soccer t-shirts. Typographic designer Ibrahim Kactioglu also participated
+                            to the organization, and the printing process has been carried out thanks to the designer
+                            Thomas Signollet and his heat press imagined as part of his ENSCI diploma project.
+                            The entire 1st year class, newly arrived at ESAD, was invited to participate
+                            at this workshop. The ground was covered with our pictograms drawn from three categories:
+                            self-portraits, sports and a logo for the workshop.
+                            The final exhibition took place at the Maison de la Culture of Amiens from November 8 to December 31, 2023.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="page-projet-galerie sketch">
+            <div class="galerie-coffret">
+                <img src="img/20231005_163249.jpg" alt="figma" class="thumbnail">
+                <img class="thumbnail " src="img/20231012_172546.jpg" alt="tshirt table">
+                <img src="img/20231012_172557.jpg" alt="tshirt" class="thumbnail long">
+                <img src="img/20231108_184104.jpg" alt="dessins macu" class="thumbnail long">
+                <img src="img/20231108_185759.jpg" alt="stats vert transparence" class="thumbnail long">
+                <img class="thumbnail " src="img/20231004_170957.jpg" alt="tshirt table">
+            </div>
+        </div>
+
+    </div>
+
+    <div id="lightbox" class="lightbox">
+        <img id="lightbox-img" src="" alt="Image agrandie">
+    </div>
+
+    <script>
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const thumbnails = document.querySelectorAll('.thumbnail');
+
+        thumbnails.forEach(thumbnail => {
+            thumbnail.addEventListener('click', () => {
+                lightboxImg.src = thumbnail.src;
+                lightbox.style.display = 'flex';
+            });
+        });
+
+        lightbox.addEventListener('click', (event) => {
+            if (event.target !== lightboxImg) {
+                lightbox.style.display = 'none';
+            }
+        });
+    </script>
+    
+    
+  
+  <script>
+    function toggleLanguage(lang) {
+        const frContent = document.getElementById('fr');
+        const enContent = document.getElementById('en');
+    
+        if (lang === 'fr') {
+            frContent.style.display = 'block';
+            enContent.style.display = 'none';
+        } else if (lang === 'en') {
+            frContent.style.display = 'none';
+            enContent.style.display = 'block';
+        }
+    }
+    </script>
+
+<!-- Menu déroulant pour changer de palette -->
+<!--<label for="themeSelect">Choisir un thème :</label>-->
+<select class="bouton-theme" id="themeSelect">
+    <option class="select-select" value="pink-theme">Rose</option>
+    <option class="select-select" value="blue-theme">Bleu</option>
+    <option class="select-select" value="orange-theme">Orange</option>
+    <option class="select-select" value="dark-theme">Nuit</option>
+  </select>
+
+
+  <script>
+    // Récupérer le menu déroulant
+const themeSelect = document.getElementById('themeSelect');
+
+// Charger le thème sauvegardé depuis localStorage au chargement de la page
+document.addEventListener('DOMContentLoaded', () => {
+    const savedTheme = localStorage.getItem('selectedTheme'); // Récupérer le thème sauvegardé
+    if (savedTheme) {
+        // Appliquer le thème sauvegardé
+        document.body.classList.add(savedTheme);
+        themeSelect.value = savedTheme; // Mettre à jour le menu déroulant
+    }
+});
+
+// Ajouter un écouteur d'événements au menu déroulant
+themeSelect.addEventListener('change', () => {
+    // Vérifier si un thème est sélectionné
+    const selectedTheme = themeSelect.value;
+
+    // Retirer toutes les classes de thème
+    document.body.classList.remove('pink-theme', 'blue-theme', 'orange-theme', 'dark-theme');
+
+    // Ajouter la classe correspondant au thème sélectionné, si elle existe
+    if (selectedTheme) {
+        document.body.classList.add(selectedTheme);
+
+        // Sauvegarder le thème sélectionné dans localStorage
+        localStorage.setItem('selectedTheme', selectedTheme);
+    }
+});
+  </script>
+
+    <!-- Bouton retour en haut -->
+    <a href="#" class="back-to-top">
+        <img class="fleche" src="fleche.svg" alt="⬆" width="25" height="41">
+        </a>
+
+
+    <script>
+        // Sélectionner le bouton
+        const backToTopButton = document.querySelector('.back-to-top');
+
+        // Afficher le bouton quand on scroll vers le bas
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) { // Afficher le bouton après 300px de scroll
+            backToTopButton.classList.add('show');
+            } else {
+            backToTopButton.classList.remove('show');
+            }
+        });
+    </script>
+
+    <script>
+        const projets = document.querySelectorAll('.projet');
+        projets.forEach(projet => {
+        projet.addEventListener('mouseover', () => {
+            projets.forEach(p => p.classList.add('unactive'));
+            projet.classList.remove('unactive');
+        });
+        projet.addEventListener('mouseout', () => {
+         projets.forEach(p => p.classList.remove('unactive'));
+        });
+        });
+    </script>
+
+    <div class="footer">
+            <p>© 2024 Marine Chantriaux - typographie : DM Sans par Colophon Foundry</p>
+    </div>
+        
+
+</body>
