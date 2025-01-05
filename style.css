@@ -389,7 +389,7 @@ body.dark-theme .no-dark-index{  /*fleches.svg se cache en mode sombre*/
 
 .dark-retour {
     display: none;
-    filter: saturate(200%);
+    filter: brightness(80%) saturate(130%);
 }
 
 .no-dark-retour{
@@ -1009,7 +1009,7 @@ body {
     --text-color: #122411;
     --text-color-surlign: #ff4d71;
     --text-color-surlign-2: #ff4d71;
-    --text-color-surlign-3: #e44400;
+    --text-color-surlign-3: #bdffa4;
     --color-span: #bdffa4;
     --button-background-color: #bdffa4;
     --lang-button-text: #ff5577;
@@ -1055,19 +1055,20 @@ body {
     --header-background-color: #ff2600; */
     --select-background-color: #a7ff03;
     --border-color: #006aff;
-    --text-color: #1a0d12;
-    --text-color-surlign: #f6fba2;
-    --text-color-surlign-2: #006aff;
+    --text-color: #040205;
+    --text-color-surlign: #391aff;
+    --text-color-surlign-2: #f6fba2;
     --text-color-surlign-3: #f6fba2;
     --color-span: #f6fba2;
-    --button-background-color: #4f30ff;
-    --lang-button-text: #f6fba2;
-    --background-bouton-theme: #4f30ff;
-    --texte-bouton-theme: #f6fba2;
-    --select-theme-hover-color: #62d0ff;
-    --backtotop-background: #4f30ff;
-    --backtotop-hover-background: #f6fba2;
-    --about-gradient: linear-gradient(to right, #62d0ff 15%, #f6fba2 100%);
+    --button-background-color: #f6fba2;
+    --lang-button-text: #391aff;
+    --background-bouton-theme: #fdff9e;
+    --texte-bouton-theme: #006aff;
+    --select-theme-hover-color: #391aff;
+    --theme-hover-text-color: #f6fba2;
+    --backtotop-background: #f6fba2;
+    --backtotop-hover-background: #391aff;
+    --about-gradient: linear-gradient(to right, #b8deff 15%, #bc64ff 100%);
   }
 
     /* Mobile gradient */
@@ -1075,12 +1076,12 @@ body {
     
     .blue-theme{
         --body-gradient: linear-gradient(180deg, 
-        #4f30ff 0px, 
-        #4f30ff 10px, 
-        #62d0ff 100px, 
-        #62d0ff 2000px, 
-        #4f30ff 2800px, 
-        #4f30ff 900px
+        #b759ff 0px, 
+        #b759ff 10px, 
+        #b8deff 100px, 
+        #b8deff 2000px, 
+        #c477ff 2800px, 
+        #c477ff 900px
     );
     }
 }
@@ -1089,12 +1090,12 @@ body {
 @media (min-width: 768px) {
     .blue-theme {
         --body-gradient: linear-gradient(180deg, 
-        #4f30ff 0px, 
-        #4f30ff 30px, 
-        #62d0ff 150px, 
-        #62d0ff 600px, 
-        #4f30ff 700px, 
-        #4f30ff 900px
+        #b759ff 0px, 
+        #b759ff 30px, 
+        #b8deff 150px, 
+        #b8deff 600px, 
+        #c477ff 700px, 
+        #c477ff 900px
     );
     }
 }
@@ -1105,19 +1106,19 @@ body {
     --select-background-color: #00ff6a;
     --border-color: #ff4d71;
     --text-color: #122411;
-    --text-color-surlign: #ff4d71;
-    --text-color-surlign-2: #ff4d71;
-    --text-color-surlign-3: #e44400;
-    --color-span: #bdffa4;
-    --button-background-color: #bdffa4;
-    --lang-button-text: #ff5577;
-    --background-bouton-theme: #bdffa4;
-    --texte-bouton-theme: #ff5577;
-    --select-theme-hover-color: #ffb5e9;
-    --theme-hover-text-color: #ff5577;
-    --backtotop-background: #bdffa4;
-    --backtotop-hover-background: #ffb5e9;
-    --about-gradient: linear-gradient(to right, #ffb5e9 15%, #bdffa4 100%);
+    --text-color-surlign: #5d35ff;
+    --text-color-surlign-2: #5d35ff;
+    --text-color-surlign-3: #5d35ff;
+    --color-span: #bfafff;
+    --button-background-color: #ff824d;
+    --lang-button-text: #5d35ff;
+    --background-bouton-theme: #5d35ff;
+    --texte-bouton-theme: #ffdc8a;
+    --select-theme-hover-color: #ffdc8a;
+    --theme-hover-text-color: #5d35ff;
+    --backtotop-background: #ffdc8a;
+    --backtotop-hover-background: #5d35ff;
+    --about-gradient: linear-gradient(to right, #ffdc8a 15%, #ff824d 100%);
   }
 
       /* Mobile gradient */
@@ -1125,12 +1126,12 @@ body {
 
     .orange-theme {
          --body-gradient: linear-gradient(180deg, 
-        #ff4d71 0px, 
-        #ff4d71 10px, 
-        #ffb5e9 100px, 
-        #ffb5e9 2000px, 
-        #ff6483 2800px, 
-        #ff6483 900px
+        #ff824d 0px, 
+        #ff824d 10px, 
+        #ffdc8a 100px, 
+        #ffdc8a 2000px, 
+        #ff824d 2800px, 
+        #ff824d 900px
     );
 }
 }
@@ -1139,12 +1140,12 @@ body {
 @media (min-width: 768px) {
     .orange-theme {
         --body-gradient: linear-gradient(180deg, 
-        #ff4d71 0px, 
-        #ff4d71 30px, 
-        #ffb5e9 150px, 
-        #ffb5e9 600px, 
-        #ff6483 700px, 
-        #ff6483 900px
+        #ff824d 0px, 
+        #ff824d 30px, 
+        #ffdc8a 150px, 
+        #ffdc8a 600px, 
+        #ff824d 700px, 
+        #ff824d 900px
     );
     }
 }
@@ -1156,18 +1157,19 @@ body {
     --select-background-color: #a7ff03;
     --border-color: #bb1784;
     --text-color: #fff7ff;
-    --text-color-surlign: #a7ff03;
+    --text-color-surlign: #ff8eb9;
     --text-color-surlign-2: #bb1784;
-    --text-color-surlign-3: #f6fba2;
-    --color-span: #a7ff03;
+    --text-color-surlign-3: #ff8eb9;
+    --color-span: #ff8eb9;
     --button-background-color: #bb1784;
-    --lang-button-text: #fff7ff;
-    --background-bouton-theme: #a7ff03;
-    --texte-bouton-theme: #040025;
+    --lang-button-text: #ff8eb9;
+    --background-bouton-theme: #ff8eb9;
+    --texte-bouton-theme: #09807e;
     --select-theme-hover-color: #bb1784;
-    --backtotop-background: #a7ff03;
-    --backtotop-hover-background: #a7ff03;
-    --about-gradient: linear-gradient(to right, #1740bb 15%, #bb1784 100%);
+    --theme-hover-text-color: #ff8eb9;
+    --backtotop-background: #ff8eb9;
+    --backtotop-hover-background: #09807e;
+    --about-gradient: linear-gradient(to right, #09807e 15%, #ff8eb9 100%);
   }
 
       /* Mobile gradient */
@@ -1177,8 +1179,8 @@ body {
              --body-gradient: linear-gradient(180deg, 
             #bb1784 0px, 
             #bb1784 10px, 
-            #1740bb 100px, 
-            #1740bb 2000px, 
+            #09807e 100px, 
+            #09807e 2000px, 
             #bb1784 2800px, 
             #bb1784 900px
         );
@@ -1191,8 +1193,8 @@ body {
             --body-gradient: linear-gradient(180deg, 
             #bb1784 0px, 
             #bb1784 40px, 
-            #1740bb 150px, 
-            #1740bb 600px, 
+            #09807e 150px, 
+            #09807e 600px, 
             #bb1784 700px, 
             #bb1784 900px
         );
