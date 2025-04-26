@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marine Chantriaux</title>
+  <link rel="icon" type="image/png" href="img/favicon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+
+
+  <style>
+    .dm-sans-regular {
+    font-family: "DM Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }
+  .dm-sans-bold {
+    font-family: "DM Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+  }
+    /* box sizing */
+    *{
+      box-sizing: border-box;
+    }
+
+    :root {
+      overscroll-behavior: none;
+    }
+
+    *{
+      box-sizing: border-box;
+    }
+    
+    html{
+      scroll-behavior: smooth;
+      height: 100%;
+      /* overflow: hidden; */
+    }
+
+    .marine {
+      position: absolute;
+      bottom: 80px;
+      left: 90px;
+      font-size: 24px;
+      color: #ff6483;
+      text-decoration: none;
+      position: fixed;
+    }
+
+
+    body{
+      margin: 0;
+      padding: 20px;
+      font-family: 'DM Sans', sans-serif;
+      /* min-height: 300vh; pour le scroll */
+    }
+    .projets{
+      display: grid;
+      /* grid-template-columns: repeat(auto-fill, 300px); */
+      color: #bdffa4;
+      /* min-height: 100vh; */
+    }
+    .projet{
+      cursor: pointer;
+      position: absolute;
+      /* justify-items: center;
+      align-items: center; */
+      top: 10px;
+      left: 10px;
+
+
+    }
+    img{
+      width: 60px;
+      height: auto;
+    }
+    video{
+      width: 100%;
+      height: auto;
+    }
+    .fixed{
+      position: fixed;
+    }
+    .projets.fixed{
+      top:0px;
+      left: 0px;
+    }
+    .overlay{
+      position: absolute;
+      width: 100vw;
+      min-height: 100vh;
+      z-index: 9999;
+      backdrop-filter: blur(10px);
+      background-color: rgba(255, 67, 67, 0.5);
+      padding: 48px;
+      top: 0;
+      left:0; 
+   
+    }
+    .close{
+      position: fixed;
+      top: 24px;
+      right: 24px;
+      width: 48px;
+      height: 48px;
+      text-align: center;
+      line-height: 45px;
+      color: #fff;
+      cursor: pointer;
+      font-size: 48px;
+      background: #000;
+      border-radius: 24px;
+    }
+
+    .wrap{
+      width:100%;
+    }
+
+    .texte{
+      background-color: aquamarine;
+    }
+
+    .refresh{
+      position: fixed;
+      width: 48px;
+      height: 48px;
+      text-align: center;
+      line-height: 46px;
+      color: #1aff00;
+      cursor: pointer;
+      font-size: 24px;
+      background: #000;
+      border-radius: 24px;
+      bottom: 24px;
+      left: 50%;
+    }
+
+    .fiche{
+      margin: 0px auto;
+      max-width: 640px;
+      padding: 0 20px 20px; 
+      backdrop-filter: blur(2px);
+    }
+
+    .fiche .intro{
+      width: 70%;
+      margin-left: 70px;
+      margin-bottom: 53px;
+      margin-top: 53px;
+    }
+
+    .fiche img{
+      margin:0 -20px 20px;
+      width: calc(100% + 40px);
+    }
+
+    .description{
+      margin-bottom: 24px;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="header">
+    
+  </header>
+  <div class="projets"></div>
+  <div class="refresh" onclick="location.reload();">↻</div>
+  <!-- gsap -->
+  <h1> <a class="marine" href="index.html">Marine Chantriaux</a></h1>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.7.0"></script>
+  <script type="module" src="main.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/Draggable.min.js"></script>
+  <!-- (https://gsap.com/docs/v3/Installation/) -->
+
+  <script src='https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/MotionPathPlugin.min.js'></script>
+</body>
+</html>
