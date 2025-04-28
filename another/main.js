@@ -182,12 +182,22 @@ json.forEach((item) => {
     close.classList.add("close");
     overlay.appendChild(close);
 
+    const close2 = document.createElement("div");
+    close2.textContent = "×";
+    close2.classList.add("close2");
+    overlay.appendChild(close2);
+
     close.addEventListener("click", () => {
-      gsap.to(overlay, {opacity: 0, duration: 1, onComplete: () => overlay.remove()});
+      gsap.to(overlay, {opacity: 0, duration: 0, onComplete: () => overlay.remove()});
       header.classList.remove("fixed");
       projets.classList.remove("fixed");
     });
 
+    close2.addEventListener("click", () => {
+      gsap.to(overlay, {opacity: 0, duration: 0, onComplete: () => overlay.remove()});
+      header.classList.remove("fixed");
+      projets.classList.remove("fixed");
+    });
 
     // const refresh = document.createElement("div");
     // refresh.textContent = "↻";
@@ -214,12 +224,12 @@ json.forEach((item) => {
 
     const titre = document.createElement("h1");
     titre.textContent = item.titre;
+    titre.style.color = "#bdffa4"; // Set the color to bdffa4
     fiche.appendChild(titre);
-    
 
     const desc = document.createElement("div");
     desc.innerHTML = item.modale;
-    desc.classList.add("description");
+    div.classList.add("description");
     fiche.appendChild(desc);
     
 
@@ -248,8 +258,8 @@ json.forEach((item) => {
     }
   
 
-    gsap.from(fiche, {opacity: 0, duration: 0.4});
-    gsap.from(overlay, {opacity: 0, duration: 0.4});
+    gsap.from(fiche, {opacity: 0, duration: 0});
+    gsap.from(overlay, {opacity: 0, duration: 0});
   });
 
 });

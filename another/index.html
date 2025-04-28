@@ -43,6 +43,10 @@
       /* overflow: hidden; */
     }
 
+    p{
+      color: #fffafb;
+    }
+
     .marine {
       position: absolute;
       bottom: 80px;
@@ -53,6 +57,9 @@
       position: fixed;
     }
 
+    .titre{
+      color: #ff6483;
+    }
 
     body{
       margin: 0;
@@ -97,7 +104,7 @@
       min-height: 100vh;
       z-index: 9999;
       backdrop-filter: blur(10px);
-      background-color: rgba(255, 67, 67, 0.5);
+      background-color: #00000071;
       padding: 48px;
       top: 0;
       left:0; 
@@ -106,15 +113,30 @@
     .close{
       position: fixed;
       top: 24px;
-      right: 24px;
+      right: 270px;
       width: 48px;
       height: 48px;
       text-align: center;
       line-height: 45px;
-      color: #fff;
+      color: #ff6483;
       cursor: pointer;
       font-size: 48px;
-      background: #000;
+      background: #bdffa4;
+      border-radius: 24px;
+    }
+
+    .close2{
+      position: fixed;
+      bottom: 24px;
+      left: 620px;
+      width: 48px;
+      height: 48px;
+      text-align: center;
+      line-height: 45px;
+      color: #ff6483;
+      cursor: pointer;
+      font-size: 48px;
+      background: #bdffa4;
       border-radius: 24px;
     }
 
@@ -132,10 +154,10 @@
       height: 48px;
       text-align: center;
       line-height: 46px;
-      color: #1aff00;
+      color: rgb(255, 242, 177);
       cursor: pointer;
       font-size: 24px;
-      background: #000;
+      background: #ff6483;
       border-radius: 24px;
       bottom: 24px;
       left: 50%;
@@ -151,7 +173,7 @@
     .fiche .intro{
       width: 70%;
       margin-left: 70px;
-      margin-bottom: 53px;
+      margin-bottom: 48px;
       margin-top: 53px;
     }
 
@@ -160,9 +182,19 @@
       width: calc(100% + 40px);
     }
 
+    .gallery{
+      margin-top: 30px;
+    }
+
     .description{
       margin-bottom: 24px;
     }
+
+    h1{
+      color: #bdffa4;
+      font-size: 40px;
+    }
+
   </style>
 </head>
 <body>
