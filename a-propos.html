@@ -14,7 +14,7 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="header">
+        <header class="header">
         <!-- https://jenseign.com/le-h1-logo/ -->
         <nav class="header-nav">
             <a class="pc" href="index.html"><img src="picto-work.png" alt="projets"></a>
@@ -30,103 +30,32 @@
     </header>
 
     <div class="page-a-propos"> <!--main project à modifier-->
-        
-        <div class="presentation"> 
-            <p> En tant qu’étudiante en DNA mention design graphique à l’<a class= "surlign" href="https://www.esad-amiens.fr/" target="_blank">ESAD d’Amiens</a>,
-               je suis aussi une graphiste pluridisciplinaire en quête de sens, de signes, de&nbsp;rencontres et de souvenirs. J’aime marquer les esprits à travers l’inattendu et le déconcertant. 
-               <!-- Qu’il dénonce, critique, raconte, ou qu’il existe dans le seul but d’amuser la galerie, mon travail de graphiste tend à porter des émotions et des messages engagés. -->
-               <br><br>Volontaire, j’arbore plusieurs casquettes: je&nbsp;suis à&nbsp;la&nbsp;fois déléguée, secrétaire du bureau des étudiants et tutrice d’une élève de première année.  
-            <br><a class= "surlign bold">Je suis à la recherche d’un stage</a> d’une durée de 4 semaines minimum à&nbsp;partir du 4 juin 2025.
-            <!-- <br> Volontaire<br>Engagée<br>Autonome<br>Enthousiaste<br> -->
-        </p> 
-        <div class="contact">
-            <div class="h2">
-                <p>Contactez-moi!</p>
-            </div>
-            <p class="lienscontact">
-                <a href="mailto: marine.chantriaux@gmail.com"target="_blank">marine.chantriaux@gmail.com</a>
-                <br><a href="https://instagram.com/graphic.ine"target="_blank">Instagram</a>
-            </p>
-            <div class="h2">
-                <p>Suivez-moi!</p>
-            </div>
-            <p class="lienscontact" style="margin-bottom: 0px;">
-                <a href="https://www.youtube.com/@MarineChantriaux"target="_blank">Youtube</a>
-                <br><a href="https://instagram.com/graphic.ine"target="_blank">Instagram</a>
-                <br><a href="https://linktr.ee/chantriauxmarine" target="_blank">Linktree</a>
-            </p>
-        </div>  
-    </div>
-            <div class="competences">
-                <div class="cc">
-                    <img src="videos/creativecloud.gif" alt="GIF Video" class="iconesanimes ccimg">
-                    <p class="iconestxt cctext">Bonne maîtrise des logiciels <br>du Creative Cloud</p>
-                </div>
-                <div class="affiche">
-                    <img src="videos/comp.gif" alt="GIF Video" class="iconesanimes compimg">
-                    <p class="iconestxt comptxt">A l'aise sur tous les supports <br> et toutes les disciplines</p>
-                </div>
-                <div class="avion">
-                    <img src="videos/avion.gif" alt="GIF Video" class="iconesanimes avionimg">
-                    <p class="iconestxt aviontxt">Pro de la communication: je gère <br>les mails, les DM Insta et les conflits</p>
-                </div>
-                <div class="motiv">
-                    <img src="videos/motiv.gif" alt="GIF Video" class="iconesanimes motivimg">
-                    <p class="iconestxt motivtxt">Esprit d'initiative <br>et enthousiame communicatif</p>
-                </div>
-                <div class="collab">
-                    <img src="videos/collab.gif" alt="GIF Video" class="iconesanimes collabimg">
-                    <p class="iconestxt collabtxt">Esprit d'équipe <br>et de collaboration</p>
-                </div>
-                <div class="voiture">
-                    <img src="videos/voiture.gif" alt="GIF Video" class="iconesanimes voitureimg">
-                    <p class="iconestxt voituretxt">Heureuse détentrice du permis B <br>et d'une fidèle Toyota</p>
-                </div>
-            </div>
+      <div class="a-propos-container">
+        <div class="presentation"><h1 class="surlign2">Étudiante <br>en design graphique</h1>
+            <p>Polyvalente, je suis compétente pour tous types de projets,
+            bien que j’ai un intérêt marqué pour la vidéo,
+            le motion design et la création d’interfaces numériques.
+            Je cultive en parallèle une pratique photographique,
+            un esprit facétieux et des influences issues de toutes
+            formes de loisirs créatifs.</p>
+        </div>
+          <img class="photo" src="img/20241031_225417-2.png" alt="portrait">
+         <!-- <h1 class="surlign2">Me contacter</h1> <p>marine.chantriaux@gmail.com</p> </div> -->
 
+      </div>
+      <div class="a-propos-container">
+              <div class="contact"><h1 class="surlign2">Contact</h1>
+            <p>marine.chantriaux@gmail.com</p>
+        </div>
     </div>
 
+        <h1>Expositions & publications</h1>
+        <ul>        </ul>
+            
+    </div>
 
-<!-- Menu déroulant pour changer de palette -->
-<!--<label for="themeSelect">Choisir un thème :</label>-->
-<select class="bouton-theme" id="themeSelect">
-    <option class="select-select" value="pink-theme">Rose</option>
-    <option class="select-select" value="blue-theme">Bleu</option>
-    <option class="select-select" value="orange-theme">Orange</option>
-    <option class="select-select" value="dark-theme">Nuit</option>
-  </select>
-  
-  <script>
-    // Récupérer le menu déroulant
-const themeSelect = document.getElementById('themeSelect');
-
-// Charger le thème sauvegardé depuis localStorage au chargement de la page
-document.addEventListener('DOMContentLoaded', () => {
-    const savedTheme = localStorage.getItem('selectedTheme'); // Récupérer le thème sauvegardé
-    if (savedTheme) {
-        // Appliquer le thème sauvegardé
-        document.body.classList.add(savedTheme);
-        themeSelect.value = savedTheme; // Mettre à jour le menu déroulant
-    }
-});
-
-// Ajouter un écouteur d'événements au menu déroulant
-themeSelect.addEventListener('change', () => {
-    // Vérifier si un thème est sélectionné
-    const selectedTheme = themeSelect.value;
-
-    // Retirer toutes les classes de thème
-    document.body.classList.remove('pink-theme', 'blue-theme', 'orange-theme', 'dark-theme');
-
-    // Ajouter la classe correspondant au thème sélectionné, si elle existe
-    if (selectedTheme) {
-        document.body.classList.add(selectedTheme);
-
-        // Sauvegarder le thème sélectionné dans localStorage
-        localStorage.setItem('selectedTheme', selectedTheme);
-    }
-});
-  </script>
+    <!-- Bouton bac à sable -->
+    <a href="https://marinechantriaux.github.io/another/" class="bacasable">Bac à sable</a>
 
     <!-- Bouton retour en haut -->
     <a href="#" class="back-to-top">
@@ -162,7 +91,7 @@ themeSelect.addEventListener('change', () => {
     </script>
 
     <div class="footer">
-            <p>© 2024 Marine Chantriaux - typographie : DM Sans par Colophon Foundry</p>
+            <p>© 2026 Marine Chantriaux - typographie : DM Sans par Colophon Foundry</p>
     </div>
 
 </body>

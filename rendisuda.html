@@ -33,7 +33,7 @@
     <div class="page-projet">
         <div class="page-projet-intro">
             <div class="image-coffret">
-                <img src="img/mockup-rue.jpg"alt="mockup rue">
+                <img src="img/05_FREE_urban_poster_mockup.png"alt="mockup rue">
             </div>
 
             <div class="description">
@@ -41,10 +41,10 @@
                     <a class="retour" href="index.html"><img class="fleche-retour no-dark-retour" src="fleche.svg" alt="⭠ RETOUR" width="25" height="41"></a>
                     <a class="retour" href="index.html"><img class="fleche-retour dark-retour" src="fleche_nuit.svg" alt="⭠ RETOUR" width="25" height="41"></a>                    
                     
-                    <div class="fr-en">
+                    <!-- <div class="fr-en">
                         <button class="fr-en" onclick="toggleLanguage('fr')">FR</button>
                         <button class="fr-en" onclick="toggleLanguage('en')">EN</button>
-                    </div>
+                    </div> -->
                 </div>
 
                 <div class="fr" id="fr">
@@ -52,13 +52,13 @@
                         <p>Rendisuda</p>
                     </div>
                     <div class="h3">
-                        <p>2024 - Posters</p>
+                        <p>2024 - Affiches</p>
                     </div>
-                    <p>Création d’une série de 3 posters autour d’un mot étranger n’ayant pas d’équivalent dans la langue française.
-                        <br>« Rendisuda » est un mot d’assamais (langue indienne) signifiant littéralement 
-                        « Je vais te couper les couilles! ».
-                        <!-- <br>Si l'une d'entre-elles dénonce particulièrement le man-spreading, chacune de ces affiches fait office de contestation féminine. 
-                        La menace sous-jacente de l'insulte est suggérée par une injure rageusement dessinée, une analogie phallique ou un sentiment d'anticipation. -->
+                    <p>« Rendisuda » est un mot d’assamais signifiant littéralement 
+                        « Je vais te couper les couilles ! ».
+                        <br>Mon objectif était de proposer une variété conceptuelle et plastique, chaque affiche faisant appel à des registres graphiques différents.
+                        <br>Celles-ci font office de contestation féminine, empreinte d'une audace visuelle revendicative qui ne laisse pas le spectateur indifférent.
+                        La menace sous-jacente de l'insulte est suggérée par une injure rageusement dessinée, une analogie phallique ou un sentiment d'anticipation.
                     </p>
                 </div>
                 <div class="en" id="en" style="display: none;">
@@ -90,7 +90,7 @@
 
     </div>
 
-    <div id="lightbox" class="lightbox">
+<div id="lightbox" class="lightbox">
         <img id="lightbox-img" src="" alt="Image agrandie">
     </div>
 
@@ -114,7 +114,7 @@
     </script>
     
     
-  
+<!--   
   <script>
     function toggleLanguage(lang) {
         const frContent = document.getElementById('fr');
@@ -128,49 +128,13 @@
             enContent.style.display = 'block';
         }
     }
-    </script>
-
-<!-- Menu déroulant pour changer de palette -->
-<!--<label for="themeSelect">Choisir un thème :</label>-->
-<select class="bouton-theme" id="themeSelect">
-    <option class="select-select" value="pink-theme">Rose</option>
-    <option class="select-select" value="blue-theme">Bleu</option>
-    <option class="select-select" value="orange-theme">Orange</option>
-    <option class="select-select" value="dark-theme">Nuit</option>
-  </select>
+    </script> -->
 
 
-  <script>
-    // Récupérer le menu déroulant
-const themeSelect = document.getElementById('themeSelect');
 
-// Charger le thème sauvegardé depuis localStorage au chargement de la page
-document.addEventListener('DOMContentLoaded', () => {
-    const savedTheme = localStorage.getItem('selectedTheme'); // Récupérer le thème sauvegardé
-    if (savedTheme) {
-        // Appliquer le thème sauvegardé
-        document.body.classList.add(savedTheme);
-        themeSelect.value = savedTheme; // Mettre à jour le menu déroulant
-    }
-});
-
-// Ajouter un écouteur d'événements au menu déroulant
-themeSelect.addEventListener('change', () => {
-    // Vérifier si un thème est sélectionné
-    const selectedTheme = themeSelect.value;
-
-    // Retirer toutes les classes de thème
-    document.body.classList.remove('pink-theme', 'blue-theme', 'orange-theme', 'dark-theme');
-
-    // Ajouter la classe correspondant au thème sélectionné, si elle existe
-    if (selectedTheme) {
-        document.body.classList.add(selectedTheme);
-
-        // Sauvegarder le thème sélectionné dans localStorage
-        localStorage.setItem('selectedTheme', selectedTheme);
-    }
-});
-  </script>
+        <!-- Bouton bac à sable -->
+    <a href="https://marinechantriaux.github.io/another/" target="_blank" class="bacasable">
+        <p>Bac à sable</p></a>
 
     <!-- Bouton retour en haut -->
     <a href="#" class="back-to-top">
@@ -206,7 +170,7 @@ themeSelect.addEventListener('change', () => {
     </script>
 
     <div class="footer">
-            <p>© 2024 Marine Chantriaux - typographie : DM Sans par Colophon Foundry</p>
+            <p>© 2026 Marine Chantriaux - typographie : DM Sans par Colophon Foundry</p>
     </div>
 
 </body>
