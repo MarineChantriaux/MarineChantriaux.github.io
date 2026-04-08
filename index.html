@@ -1,336 +1,159 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TYPIC</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-    <link rel="preconnect" href="https://rsms.me/">
-    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marine Chantriaux</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <!-- favicon / mini-icone-->
+    <meta name="description" content="Portfolio de Marine Chantriaux, designer graphique.">
+    <!-- meta description pr chaque page-->
+    <link rel="stylesheet" href="style.css"> <!-- Add the link to the external CSS file : raccourci link:css -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
 </head>
 
 
-
 <body>
-    <div class="overlay-info" id="overlayInfo">
-    <div class="modale-info">
-        <button class="modale-info__fermer" onclick="fermerInfo()">✕</button>
-        <div class="modale-info__contenu">
-            <strong>TYPIC</strong>
-            <p>Un mot s’affiche à l’écran : avec ton clavier et ta souris, à toi de dessiner ce que ce concept 
-                représente pour toi. 
-                <br><br> Comment symboliser cette idée avec un système graphique contraint tel que l'alphabet latin ?
-Ce projet interroge la valeur universelle des mots, et les divergences de représentation symbolique. 
-<br>Rassure-toi, on se rapproche plus de l’expérience sociale que du concours de dessin. L’objectif, c’est de comprendre comment ton cerveau symbolise 
-et représente une idée associée à un mot. Le plus important, c’est de bien <strong style="color: #c5c211;">sauvegarder</strong> quand tu as terminé !</p>
-            <br><strong>Comment jouer</strong>
-            <p>Appuie sur une touche du clavier pour faire apparaître un glyphe : lettre minuscule, majuscule, ponctuation, etc.</p>
-            <p><strong>Déplacer</strong> : clic gauche + glisser</p>
-            <p><strong>Pivoter</strong> : clic droit + glisser</p>
-            <p><strong>Agrandir ou rétrécir</strong> : molette de la souris</p>
-            <p><strong>Retourner</strong> : clic gauche simple</p>
-            <p><strong>Supprimer une lettre </strong> : glisser sur <img src="img/poubelle-fermee.svg" style="height: 1em; width: auto; vertical-align: middle; border-radius: 0;"></p>
-            <p><strong>Réinitialiser</strong> : clic sur <img src="img/poubelle-fermee.svg" style="height: 1em; width: auto; vertical-align: middle; border-radius: 0;"></p>
-            <p><strong>Sauvegarder</strong> : clic sur <img src="img/save.svg" style="height: 1em; width: auto; vertical-align: middle; border-radius: 0;"></p>            
+    <header class="header">
+        <!-- https://jenseign.com/le-h1-logo/ -->
+        <nav class="header-nav">
+            <a class="pc" href="index.html"><img src="picto-work.png" alt="projets"></a>
+        </nav>
+        <h1><a href="index.html"><img class="mobile "src="favicon.png" alt="Marine Chantriaux" width="120" height=""><img class="no-mobile "src="logo.svg" alt="Marine Chantriaux" width="117" height="51"></a></h1>
+        <nav class="header-nav"> 
+            <a href="a-propos.html">
+                <img src="picto-about.png" alt="a propos">
+            </a>
+            <!-- <a href="mailto: marine.chantriaux@gmail.com"><img src="picto-contact.png" alt="mail"></a> -->
+            <a href="https://instagram.com/graphic.ine"><img src="picto-insta.png" alt="instagram"></a>
+        </nav>
+    </header>
 
 
-            <br><strong>Comment je vais utiliser ta production</strong>
-            <p>En sauvegardant tes dessins, tu les envoies sur un drive 
-                que j'ai créé pour ce projet. 
-                <br>L'enjeu final est de tenter de trouver aux mots une valeur graphique universelle. 
-                Le résultat permettra de mettre le doigt sur des divergences ou des conventions de représentation.</p>
-        </div>
+    <div class="projets">
+
+        <a class="projet" href="catrip.html">
+            <img class="a-img" src="img/intro.png" alt="introduction catrip">
+            <div class="overlay">
+                <span>Catrip<div class="cat">webdesign-identité visuelle</div></span>
+            </div>
+        </a>
+    
+        <a class="projet" href="scarybestions.html">
+            <img src="img/20241129173532_modif.jpg" alt="image magazine">
+            <div class="overlay">
+                <span>Scary Bestions <div class="cat">magazine-sondage</div></span>
+            </div>
+        </a>
+
+                <a class="projet" href="ponthieu-marquenterre.html">
+            <img class="b-img" src="img/pm-intro-copie.png" alt="bridget riley">
+            <div class="overlay">
+                <span>Ponthieu-Marquenterre<div class="cat">webdesign-identité visuelle</div></span>
+            </div>
+        </a>
+
+        <a class="projet" href="my-goodnight.html">
+            <img class="b-img" src="img/my-goodnight-intro.jpg" alt="rænt logo">
+            <div class="overlay">
+                <span>My Goodnight<div class="cat">vidéo</div></span>
+            </div>
+        </a>
+
+        <a class="projet" href="anonymes-pittoresques.html">
+            <img class="b-img" src="img/20130116-SAM_8564-intro.jpg"alt="photographie">
+            <div class="overlay">
+                <span>Anonymes<br>pittoresques<div class="cat">photographies</div></span>
+            </div>
+        </a>
+
+        <a class="projet" href="rendisuda.html">
+            <img class="b-img" src="img/rendisuda23-intro.jpg" alt="posters">
+            <div class="overlay">
+                <span>Rendisuda <div class="cat">posters</div></span>
+            </div>
+        </a>
+
+        <a class="projet" href="chevres-naines.html">
+            <img  src="img/chevres.jpg" alt="chevres naines">
+            <div class="overlay">
+                <span>Chèvres naines<div class="cat">dessin-audio-vidéo</div></span>
+            </div>
+        </a>
+
+                <a class="projet" href="pas-de-calais.html">
+            <img src="img/pdc-gif-intro.gif" alt="miniature motion-design">
+            <div class="overlay">
+                <span>Pas-de-Calais tourisme<div class="cat">motion-design</div></span>
+            </div>
+        </a>
+
+        <a class="projet" target="_blank" href="https://marinechantriaux.github.io/another/">
+            <img class="b-img" src="img/Toddler-music_doigt_final copie.jpg"alt="poster orange is the new waide">
+            <div class="overlay">
+                <span>Bac à sable<div class="cat">en travaux</div></span>
+            </div>
+        </a>
+
+
+
+
     </div>
-</div>
-<div class="header">
-    <div class="devinette"></div>
-    <!-- <div class="nouveau-mot" onclick="chargerMot()">R</div> -->
-       <img src="img/again.svg" onclick="chargerMot()" class="nouveau-mot">
-</div>
-<div class="zone"></div>
 
-<div class="info" onclick="ouvrirInfo()"><img src="img/info.svg"></div>
+    <div class="h1 indexstage">
+        <img class="flechesindex no-dark-index" src="fleches.svg" alt="fleches" width="300">
+        <img class="flechesindex dark-index" src="fleches_nuit.svg" alt="fleches" width="300">
 
-<div class="boutons">
-   <!-- <div class="reset" onclick="resetLettres()">
-        <img src="img/reset.svg" class="reset-normal">
-    </div> -->
-    <div class="poubelle" id="poubelle" onclick="resetLettres()">
-        <img src="img/poubelle-fermee.svg" class="pb-normal">
-        <img src="img/poubelle-ouverte.svg" class="pb-hover">
+        <p class="h1 indexstage1"> Vous  <a class= "surlign" href="a-propos.html" target="_blank">aimez</a> ce que vous voyez?</p>
+    
+        <p class="h1 indexstage2"><a href="a-propos.html">Faisons connaissance</a></p>
     </div>
-    <div class="save" id="btnSave" onclick="sauvegarder()">
-        <img src="img/save.svg" class="save-normal">
-        <img src="img/save2.svg" class="save-hover">
-    </div>
-</div>
 
-   <div class="bulle" id="bulle">Glisse une lettre sur la poubelle pour l'effacer de l'écran. <br>Clique pour réinitialiser.</div>
+        <!-- Bouton bac à sable -->
+    <a href="https://marinechantriaux.github.io/another/" target="_blank" class="bacasable">
+        <p>Bac à sable</p></a>
 
 
-<script>
-/* ==============================
-   CONFIGURATION
-================================ */
-const SHEET_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTnAkjAsuUiBntgeUtfdFKVL_9lOcBV_JM0_K20E734x_rlrmykfHjbxOUQ6Cc-4k145-dYMj6VZD-3/pub?output=csv";
-const DRIVE_URL = "https://script.google.com/macros/s/AKfycbwE507ySOQrt3CvSRTLDJ58oUDbV6wTi6DybiiWSjO7vsLqmu-LhnpQ3JGsbHxyvGPY/exec";
+    <!-- Bouton retour en haut -->
+    <a href="#" class="back-to-top">
+        <img class="fleche" src="fleche.svg" alt="⬆" width="25" height="41">
+        </a>
 
-/* ==============================
-   BOUTON RESET
-================================ */
-function resetLettres() {
-    document.querySelectorAll(".lettre").forEach(l => l.remove());
-}
 
-/* ==============================
-   BOUTON SAUVEGARDER (local + Drive)
-================================ */
-async function sauvegarder() {
-    const btn = document.getElementById("btnSave");
-    btn.style.pointerEvents = "none";
-    btn.style.opacity = "0.5";
+    <script>
+        // Sélectionner le bouton
+        const backToTopButton = document.querySelector('.back-to-top');
 
-    try {
-        const canvas = await html2canvas(document.body);
-        const imageBase64Full = canvas.toDataURL("image/png");
-        const imageBase64 = imageBase64Full.split(",")[1];
-
-        // Nom du fichier
-        const mot = document.querySelector(".devinette").textContent || "image";
-        const now = new Date();
-        const date = now.toLocaleString("fr-FR")
-            .replace(/[/:]/g, "-")
-            .replace(" ", "_");
-        const nomFichier = `${mot}_${date}.png`;
-
-        // ── 1. Téléchargement local ──
-        const lien = document.createElement("a");
-        lien.href = imageBase64Full;
-        lien.download = nomFichier;
-        lien.click();
-
-        // ── 2. Envoi vers Google Drive ──
-        const response = await fetch(DRIVE_URL, {
-            method: "POST",
-            body: JSON.stringify({
-                image: imageBase64,
-                nom: nomFichier
-            })
+        // Afficher le bouton quand on scroll vers le bas
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) { // Afficher le bouton après 300px de scroll
+            backToTopButton.classList.add('show');
+            } else {
+            backToTopButton.classList.remove('show');
+            }
         });
+    </script>
 
-        console.log("Drive :", await response.text());
+    <script>
+        const projets = document.querySelectorAll('.projet');
+        projets.forEach(projet => {
+        projet.addEventListener('mouseover', () => {
+            projets.forEach(p => p.classList.add('unactive'));
+            projet.classList.remove('unactive');
+        });
+        projet.addEventListener('mouseout', () => {
+         projets.forEach(p => p.classList.remove('unactive'));
+        });
+        });
+    </script>
 
+    
 
-    } catch (err) {
-        console.error("Erreur sauvegarde :", err);
-    } finally {
-        btn.style.pointerEvents = "auto";
-        btn.style.opacity = "1";
-    }
-}
-
-/* ==============================
-   GOOGLE SHEETS — MOT ALÉATOIRE
-================================ */
-async function chargerMot() {
-    const response = await fetch(SHEET_URL);
-    const csv = await response.text();
-    const mots = csv.split("\n").map(m => m.trim()).filter(m => m !== "");
-    const mot = mots[Math.floor(Math.random() * mots.length)];
-    afficherMot(mot);
-}
-
-function afficherMot(mot) {
-    document.querySelector(".devinette").textContent = mot;
-}
-
-/* ==============================
-   VARIABLES GLOBALES
-================================ */
-let active = null;
-let isDragging = false;
-let mode = null;
-let hasMoved = false;
-
-let offsetX = 0;
-let offsetY = 0;
-
-let startX, startY;
-let startRotation, startScale, startFlip;
-
-const ROTATION_SENSITIVITY = 0.5;
-const SCALE_SENSITIVITY = 0.005;
-
-/* ==============================
-   CREATION D'UNE LETTRE
-================================ */
-document.addEventListener("keydown", e => {
-    if (e.key.length !== 1) return;
-    const zone = document.querySelector(".zone");
-    const div = document.createElement("div");
-    div.className = "lettre";
-    div.textContent = e.key;
-    div.dataset.rotation = 0;
-    div.dataset.scale = 1;
-    div.dataset.flip = 1;
-
-    document.body.appendChild(div); // ← on remet dans body
-
-    const zoneRect = zone.getBoundingClientRect();
-    const rect = div.getBoundingClientRect();
-
-    // Centre horizontal de la zone, bas de la zone
-    const tx = 40;
-    const ty = 460;
-    // const tx = zoneRect.left + (zoneRect.width / 2) - (rect.width / 2);
-    // const ty = zoneRect.top + zoneRect.height - rect.height;
-
-    div.dataset.tx = tx;
-    div.dataset.ty = ty;
-    applyTransform(div);
-    attachEvents(div);
-});
-
-/* ==============================
-   ATTACHE DES EVENEMENTS
-================================ */
-function attachEvents(el) {
-    el.addEventListener("mousedown", e => {
-        active = el;
-        isDragging = true;
-        hasMoved = false;
-
-        startX = e.clientX;
-        startY = e.clientY;
-
-        startRotation = parseFloat(el.dataset.rotation);
-        startScale = parseFloat(el.dataset.scale);
-        startFlip = parseFloat(el.dataset.flip);
-
-        offsetX = parseFloat(el.dataset.tx);
-        offsetY = parseFloat(el.dataset.ty);
-
-        if (e.button === 2) mode = "rotate";  // ← clic droit = rotation seulement
-        else mode = "move";
-    });
-
-    // Molette = scale
-    el.addEventListener("wheel", e => {
-        e.preventDefault();
-        const currentScale = parseFloat(el.dataset.scale);
-        const delta = e.deltaY > 0 ? -0.1 : 0.1;  // bas = rétrécir, haut = agrandir
-        el.dataset.scale = Math.max(0.1, currentScale + delta);
-        applyTransform(el);
-    }, { passive: false });
-}
-
-document.addEventListener("contextmenu", e => e.preventDefault());
-
-/* ==============================
-   MOUVEMENT DE LA SOURIS
-================================ */
-document.addEventListener("mousemove", e => {
-    if (!isDragging || !active) return;
-
-    const dx = e.clientX - startX;
-    const dy = e.clientY - startY;
-
-    if (Math.abs(dx) > 3 || Math.abs(dy) > 3) hasMoved = true;
-
-    if (mode === "move") {
-        active.dataset.tx = offsetX + dx;
-        active.dataset.ty = offsetY + dy;
-        applyTransform(active);
-    }
-
-    if (mode === "rotate") {  // ← clic droit = rotation seulement
-        const newRotation = startRotation + dx * ROTATION_SENSITIVITY;
-        active.dataset.rotation = newRotation;
-        applyTransform(active);
-    }
-});
-
-
-
-/* ==============================
-   FIN DU CLIC
-================================ */
-document.addEventListener("mouseup", e => {
-    if (!active) return;
-
-    const rect = poubelle.getBoundingClientRect();
-    const surPoubelle = (
-        e.clientX >= rect.left && e.clientX <= rect.right &&
-        e.clientY >= rect.top  && e.clientY <= rect.bottom
-    );
-
-    if (surPoubelle) {
-        active.remove();
-    } else if (!hasMoved && e.button === 0) {
-        active.dataset.flip *= -1;
-        applyTransform(active);
-    }
-
-    isDragging = false;
-    active = null;
-});
-
-
-
-/* ==============================
-   APPLICATION DES TRANSFORMATIONS
-================================ */
-function applyTransform(el) {
-    const rotation = el.dataset.rotation;
-    const scale = el.dataset.scale;
-    const flip = el.dataset.flip;
-    const tx = el.dataset.tx;
-    const ty = el.dataset.ty;
-
-    el.style.transform = `translate(${tx}px, ${ty}px) rotate(${rotation}deg) scale(${scale * flip}, ${scale})`;
-}
-
-/* ==============================
-   INIT
-================================ */
-chargerMot();
-
-
-/* ==============================
-   BULLE POUBELLE
-================================ */
-const bulle = document.getElementById("bulle");
-let bulleTimeout = null;
-
-poubelle.addEventListener("mouseenter", () => {
-    if (isDragging) return; // on tient une lettre, pas de bulle
-    bulle.classList.add("bulle--visible");
-    bulleTimeout = setTimeout(() => {
-        bulle.classList.remove("bulle--visible");
-    }, 2400);
-});
-
-poubelle.addEventListener("mouseleave", () => {
-    clearTimeout(bulleTimeout);
-    bulle.classList.remove("bulle--visible");
-});
-
-
-
-function ouvrirInfo() {
-    document.getElementById("overlayInfo").classList.add("actif");
-}
-function fermerInfo() {
-    document.getElementById("overlayInfo").classList.remove("actif");
-}
-// Fermer en cliquant sur l'overlay (hors modale)
-document.getElementById("overlayInfo").addEventListener("click", function(e) {
-    if (e.target === this) fermerInfo();
-});
-
-
-</script>
+    <div class="footer">
+            <p>© 2026 Marine Chantriaux - typographie : DM Sans par&nbsp;Colophon Foundry</p>
+    </div>
 
 </body>
 </html>
